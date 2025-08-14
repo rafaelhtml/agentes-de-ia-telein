@@ -49,12 +49,13 @@ const Solution = () => {
         {/* Main Solution */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            A solução que sua empresa 
+            O robô de vendas que sua empresa 
             <span className="text-telein-blue block">estava esperando</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nossa URA Reversa automatiza completamente sua prospecção, qualifica leads 
-            e entrega apenas clientes interessados para sua equipe de vendas.
+            Nosso sistema automatizado liga para sua base, qualifica quem tem interesse real 
+            e entrega apenas clientes prontos para sua equipe de vendas.
+            <span className="block text-sm mt-2 opacity-75">*Sistema URA Reversa Telein</span>
           </p>
         </div>
         
@@ -62,7 +63,7 @@ const Solution = () => {
           {/* Benefits List */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-telein-orange mb-6">
-              Como funciona a URA Reversa Telein:
+              Como funciona o Robô de Vendas Telein:
             </h3>
             
             <div className="space-y-4">
@@ -90,7 +91,7 @@ const Solution = () => {
               />
               <div className="mt-6 text-center">
                 <h4 className="text-lg font-semibold text-telein-blue mb-2">
-                  Leads chegam direto no seu WhatsApp
+                  Leads chegam automaticamente no seu WhatsApp
                 </h4>
                 <p className="text-muted-foreground">
                   Prontos para conversar e comprar

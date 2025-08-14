@@ -25,8 +25,8 @@ const CTA = () => {
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Pare de perder vendas!
-            <span className="text-telein-blue block">Comece hoje mesmo</span>
+            Tenha seu próprio
+            <span className="text-telein-blue block">robô de vendas hoje</span>
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
