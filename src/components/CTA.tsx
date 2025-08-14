@@ -4,8 +4,8 @@ import { Phone, MessageSquare, CheckCircle } from "lucide-react";
 const CTA = () => {
   const guarantees = [
     "Teste grátis por 7 dias",
-    "Setup em 5 minutos",
-    "Suporte 24/7 incluído",
+    "Configuração com vídeos e suporte",
+    "Planos diários, semanais e mensais",
     "Sem contratos de fidelidade"
   ];
 
@@ -30,8 +30,8 @@ const CTA = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Enquanto você está lendo, seus concorrentes já estão automatizando vendas. 
-            Não fique para trás - comece sua transformação agora!
+            Único no mercado com planos flexíveis (diários, semanais, mensais) e sem fidelidade. 
+            Só precisa da lista de contatos - o resto fazemos por você!
           </p>
           
           {/* Guarantees */}
@@ -73,16 +73,16 @@ const CTA = () => {
             
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-telein-blue mb-2">7 dias</div>
-                <p className="text-muted-foreground">Teste completamente grátis</p>
+                <div className="text-3xl font-bold text-telein-blue mb-2">14 anos</div>
+                <p className="text-muted-foreground">De experiência no mercado</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-telein-orange mb-2">5 min</div>
-                <p className="text-muted-foreground">Para configurar tudo</p>
+                <div className="text-3xl font-bold text-telein-orange mb-2">+10k</div>
+                <p className="text-muted-foreground">Clientes já atendidos</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-telein-blue mb-2">24/7</div>
-                <p className="text-muted-foreground">Suporte sempre disponível</p>
+                <div className="text-3xl font-bold text-telein-blue mb-2">0 min</div>
+                <p className="text-muted-foreground">Setup automático com vídeos</p>
               </div>
             </div>
           </div>

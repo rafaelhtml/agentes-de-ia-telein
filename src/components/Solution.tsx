@@ -5,11 +5,15 @@ import whatsappImage from "@/assets/whatsapp-automation.jpg";
 const Solution = () => {
   const benefits = [
     "Automatiza 100% das ligações de prospecção",
-    "Qualifica leads antes de passar para vendas",
-    "Conecta automaticamente no WhatsApp",
+    "Áudio com IA direto na plataforma - sem gravações",
+    "Assistente IA cria 3 opções de copy automaticamente",
+    "Cliente responde por tecla ou palavra-chave",
+    "Conecta WhatsApp (API oficial/não oficial) e SMS",
     "Funciona seg-sex 9h às 19h e sáb 9h às 14h",
-    "Aumenta conversão em até 300%",
-    "Libera sua equipe para vender mais"
+    "Planos diários, semanais e mensais - únicos no mercado",
+    "Sem contrato de fidelidade - cancele quando quiser",
+    "Integração com outros CRMs via webhook",
+    "Suporte no horário comercial por email, WhatsApp e telefone"
   ];
 
   const process = [
@@ -22,14 +26,14 @@ const Solution = () => {
     {
       step: "2", 
       icon: Target,
-      title: "Qualifica interesse",
-      description: "URA identifica clientes com real interesse no produto"
+      title: "Cliente demonstra interesse",
+      description: "Responde por tecla ou palavra-chave que você definiu"
     },
     {
       step: "3",
       icon: MessageSquare,
-      title: "Conecta no WhatsApp",
-      description: "Leads qualificados são direcionados para seu WhatsApp"
+      title: "Conecta automaticamente",
+      description: "Leads qualificados chegam no WhatsApp, SMS ou seu CRM"
     },
     {
       step: "4",

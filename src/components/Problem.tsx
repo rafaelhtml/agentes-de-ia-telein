@@ -10,17 +10,17 @@ const Problem = () => {
     {
       icon: TrendingDown,
       title: "Baixa taxa de conversão",
-      description: "Muitos leads não qualificados chegam até seus vendedores"
+      description: "Sem qualificação adequada, vendedores perdem tempo com leads frios"
     },
     {
       icon: Users,
-      title: "Equipe sobrecarregada",
-      description: "Vendedores gastam tempo com prospecção em vez de vender"
+      title: "Dificuldade para escalar vendas",
+      description: "Equipe limitada não consegue ligar para toda a base de contatos"
     },
     {
       icon: AlertTriangle,
-      title: "Oportunidades perdidas",
-      description: "Leads interessados não são contactados no momento certo"
+      title: "Dependência de sistemas complexos",
+      description: "Plataformas caras com contratos longos e configuração complicada"
     }
   ];
 

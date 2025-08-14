@@ -56,11 +56,12 @@ const Results = () => {
         {/* Results Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Resultados que nossos clientes
-            <span className="text-telein-blue block">estão alcançando</span>
+            Resultados que nossos
+            <span className="text-telein-blue block">+10.000 clientes</span>
+            estão alcançando
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Empresas de todos os tamanhos estão multiplicando suas vendas com nossa URA Reversa
+            14 anos de experiência ajudando empresas a multiplicar vendas
           </p>
         </div>
 

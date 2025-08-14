@@ -17,8 +17,11 @@ const Hero = () => {
           {/* Content */}
           <div className="space-y-8">
             {/* Logo Placeholder */}
-            <div className="text-telein-blue text-2xl font-bold">
+            <div className="text-telein-blue text-2xl font-bold mb-2">
               Telein
+            </div>
+            <div className="text-sm text-muted-foreground font-medium">
+              14 anos no mercado • +10.000 clientes atendidos
             </div>
             
             <div className="space-y-6">
@@ -49,11 +52,11 @@ const Hero = () => {
             <div className="flex flex-wrap gap-8 pt-8">
               <div className="flex items-center gap-2">
                 <Users className="text-telein-blue" />
-                <span className="text-sm">Mais de 1.000 empresas confiam</span>
+                <span className="text-sm">+10.000 clientes confiam</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="text-telein-orange" />
-                <span className="text-sm">Setup em 5 minutos</span>
+                <span className="text-sm">Planos flexíveis sem fidelidade</span>
               </div>
             </div>
           </div>
