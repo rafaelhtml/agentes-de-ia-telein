@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Users, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-ura-reversa.jpg";
+import teleinLogo from "@/assets/telein-logo.png";
 
 const Hero = () => {
   return (
@@ -16,9 +17,9 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
-            {/* Logo Placeholder */}
-            <div className="text-telein-blue text-2xl font-bold mb-2">
-              Telein
+            {/* Logo */}
+            <div className="mb-2">
+              <img src={teleinLogo} alt="Telein" className="h-12 w-auto" />
             </div>
             <div className="text-sm text-muted-foreground font-medium">
               14 anos no mercado • +10.000 clientes atendidos
