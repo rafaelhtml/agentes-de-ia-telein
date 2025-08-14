@@ -46,7 +46,7 @@ const Results = () => {
       name: "Roberto Costa",
       company: "Consultoria Financeira",
       result: "ROI de 400% no primeiro mês",
-      quote: "O investimento se pagou rapidamente. É impressionante como chegam leads qualificados direto no WhatsApp."
+      quote: "O investimento se pagou rapidamente. É impressionante a qualidade dos leads que conseguimos contatar via WhatsApp."
     }
   ];
 

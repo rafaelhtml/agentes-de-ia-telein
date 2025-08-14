@@ -8,7 +8,7 @@ const Solution = () => {
     "Áudio com IA direto na plataforma - sem gravações",
     "Assistente IA cria 3 opções de copy automaticamente",
     "Cliente responde por tecla ou palavra-chave",
-    "Conecta WhatsApp (API oficial/não oficial) e SMS",
+    "Oferece WhatsApp (API oficial/não oficial) e SMS para contato",
     "Funciona seg-sex 9h às 19h e sáb 9h às 14h",
     "Planos diários, semanais e mensais - únicos no mercado",
     "Sem contrato de fidelidade - cancele quando quiser",
@@ -32,8 +32,8 @@ const Solution = () => {
     {
       step: "3",
       icon: MessageSquare,
-      title: "Conecta automaticamente",
-      description: "Leads qualificados chegam no WhatsApp, SMS ou seu CRM"
+      title: "Oferece contato direto",
+      description: "Possibilita contato via WhatsApp, SMS ou integração com seu CRM"
     },
     {
       step: "4",
@@ -91,7 +91,7 @@ const Solution = () => {
               />
               <div className="mt-6 text-center">
                 <h4 className="text-lg font-semibold text-telein-blue mb-2">
-                  Leads chegam automaticamente no seu WhatsApp
+                  Possibilita contato direto via WhatsApp com leads interessados
                 </h4>
                 <p className="text-muted-foreground">
                   Prontos para conversar e comprar
