@@ -26,10 +26,8 @@ const Hero = () => {
             
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                <span className="text-telein-blue block">Robô de vendas</span>
-                que entrega no WhatsApp
-                <span className="text-telein-orange block">apenas clientes prontos</span>
-                para comprar
+                <span className="text-telein-blue block">Venda mais</span>
+                <span className="text-telein-orange block">trabalhando menos</span>
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
