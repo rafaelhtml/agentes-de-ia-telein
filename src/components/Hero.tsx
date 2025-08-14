@@ -26,12 +26,14 @@ const Hero = () => {
             
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                <span className="text-telein-blue block">Vendas no</span>
-                <span className="text-telein-orange block">piloto automático</span>
+                <span className="text-telein-blue block">Multiplique suas vendas</span>
+                com o robô que liga,
+                <span className="text-telein-orange block">oferece e qualifica</span>
+                automaticamente
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
-                Robô liga para milhares de prospects, qualifica automaticamente e entrega no seu WhatsApp apenas clientes prontos para fechar negócio. Sua equipe só atende quem já quer comprar.
+                Sistema faz milhares de ligações, apresenta sua oferta e conecta no seu WhatsApp apenas clientes que demonstraram interesse real em comprar.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
                 *Tecnologia URA Reversa
