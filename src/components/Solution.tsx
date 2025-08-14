@@ -5,6 +5,7 @@ import whatsappImage from "@/assets/whatsapp-integration.jpg";
 const Solution = () => {
   const benefits = [
     "Liga automaticamente para toda sua base de contatos",
+    "Bina Inteligente: utiliza números do mesmo DDD do destino para facilitar atendimento",
     "Áudio com IA ou gravação com sua própria voz",
     "Assistente IA cria 3 opções de copy automaticamente",
     "Filtra e identifica apenas os contatos interessados",
