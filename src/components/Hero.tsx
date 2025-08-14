@@ -34,7 +34,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
-                Sistema liga para sua lista de contatos, oferece seu produto, filtra quem demonstrou interesse e chama no Whatsapp apenas interessados.
+                Sistema liga para sua lista de contatos, oferece seu produto, filtra quem demonstrou interesse e chama no Whatsapp de forma automática.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
                 *Tecnologia URA Reversa
