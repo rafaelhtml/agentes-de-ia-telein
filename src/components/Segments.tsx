@@ -74,7 +74,7 @@ const Segments = () => {
               🎯 Seu segmento não está na lista?
             </h3>
             <p className="text-accent-foreground/80 text-lg">
-              Nossa URA Reversa funciona para qualquer negócio que precise fazer ofertas por telefone. 
+              Nossa URA Reversa funciona para qualquer negócio que possa fazer ofertas por telefone. 
               <span className="block mt-2 font-semibold">Fale conosco e vamos adaptar para seu mercado!</span>
             </p>
           </div>
