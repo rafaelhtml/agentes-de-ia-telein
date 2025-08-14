@@ -5,7 +5,7 @@ import whatsappImage from "@/assets/whatsapp-automation.jpg";
 const Solution = () => {
   const benefits = [
     "Liga automaticamente para toda sua base de contatos",
-    "Áudio com IA direto na plataforma - sem gravações",
+    "Áudio com IA ou gravação com sua própria voz",
     "Assistente IA cria 3 opções de copy automaticamente",
     "Filtra e identifica apenas os contatos interessados",
     "Gera lista qualificada automaticamente",
