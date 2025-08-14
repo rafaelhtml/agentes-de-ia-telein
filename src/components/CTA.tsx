@@ -3,7 +3,7 @@ import { Phone, MessageSquare, CheckCircle } from "lucide-react";
 
 const CTA = () => {
   const guarantees = [
-    "Teste grátis por 7 dias",
+    "Teste gratuito de 5 horas",
     "Configuração com vídeos e suporte",
     "Planos diários, semanais e mensais",
     "Sem contratos de fidelidade"
@@ -52,7 +52,7 @@ const CTA = () => {
               className="text-xl py-6 px-12 animate-pulse-glow"
             >
               <Phone className="mr-3 h-6 w-6" />
-              COMEÇAR TESTE GRÁTIS AGORA
+              COMEÇAR TESTE DE 5 HORAS
             </Button>
             
             <Button 
