@@ -93,10 +93,10 @@ const Solution = () => {
               />
               <div className="mt-6 text-center">
                 <h4 className="text-lg font-semibold text-telein-blue mb-2">
-                  Integre facilmente com seu WhatsApp Business
+                  Integre facilmente com seu WhatsApp
                 </h4>
                 <p className="text-muted-foreground">
-                  Conecta como WhatsApp Web e chama leads interessados automaticamente
+                  É tão fácil como conectar no Whatsapp Web
                 </p>
               </div>
             </div>
