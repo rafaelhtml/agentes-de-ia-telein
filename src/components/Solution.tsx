@@ -65,7 +65,7 @@ const Solution = () => {
           {/* Benefits List */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-telein-orange mb-6">
-              Como funciona o Robô de Vendas Telein:
+              Benefícios
             </h3>
             
             <div className="space-y-4">
