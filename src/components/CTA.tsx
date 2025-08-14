@@ -52,7 +52,7 @@ const CTA = () => {
               className="text-xl py-6 px-12 animate-pulse-glow"
             >
               <Phone className="mr-3 h-6 w-6" />
-              TESTE 5H COM 3 ROBÔS (~2000 LIGAÇÕES)
+              TESTE GRÁTIS (2000 LIGAÇÕES)
             </Button>
             
             <Button 
