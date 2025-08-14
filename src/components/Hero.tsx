@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="cta" size="xl" className="animate-pulse-glow">
                 <Phone className="mr-2" />
-                Quero Testar 5 Horas
+                Teste 5h com 3 Robôs (~2000 ligações)
               </Button>
               <Button variant="outline_light" size="xl">
                 <Zap className="mr-2" />
