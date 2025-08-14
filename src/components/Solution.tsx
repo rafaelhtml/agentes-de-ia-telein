@@ -7,7 +7,7 @@ const Solution = () => {
     "Automatiza 100% das ligações de prospecção",
     "Qualifica leads antes de passar para vendas",
     "Conecta automaticamente no WhatsApp",
-    "Funciona 24/7 sem pausas ou feriados",
+    "Funciona seg-sex 9h às 19h e sáb 9h às 14h",
     "Aumenta conversão em até 300%",
     "Libera sua equipe para vender mais"
   ];
