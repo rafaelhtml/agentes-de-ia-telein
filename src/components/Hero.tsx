@@ -33,7 +33,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
-                Sistema faz milhares de ligações, apresenta sua oferta e conecta no seu WhatsApp apenas clientes que demonstraram interesse real em comprar.
+                Sistema faz milhares de ligações telefônicas, fala sua oferta e chama no seu WhatsApp apenas clientes que demonstraram interesse real em comprar.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
                 *Tecnologia URA Reversa
