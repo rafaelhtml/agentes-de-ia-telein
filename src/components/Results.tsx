@@ -5,26 +5,26 @@ const Results = () => {
   const stats = [
     {
       icon: TrendingUp,
-      number: "300%",
-      label: "Aumento médio em conversões",
+      number: "2.847",
+      label: "Ligações automatizadas por dia em média",
       color: "text-telein-blue"
     },
     {
-      icon: Clock,
-      number: "80%",
-      label: "Redução no tempo de prospecção",
+      icon: Users,
+      number: "342",
+      label: "Leads qualificados gerados diariamente",
       color: "text-telein-orange"
     },
     {
-      icon: Users,
-      number: "5x",
-      label: "Mais leads qualificados por dia",
+      icon: Clock,
+      number: "12%",
+      label: "Taxa média de conversão de ligação para lead",
       color: "text-telein-blue"
     },
     {
       icon: DollarSign,
-      number: "R$ 50k",
-      label: "Aumento médio no faturamento mensal",
+      number: "R$ 1,20",
+      label: "Custo médio por lead qualificado gerado",
       color: "text-telein-orange"
     }
   ];
