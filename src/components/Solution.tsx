@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, MessageSquare, Target, Zap } from "lucide-react";
-import whatsappImage from "@/assets/whatsapp-automation.jpg";
+import whatsappImage from "@/assets/whatsapp-integration.jpg";
 
 const Solution = () => {
   const benefits = [
@@ -88,15 +88,15 @@ const Solution = () => {
             <div className="bg-card rounded-2xl p-8 shadow-telein-card">
               <img 
                 src={whatsappImage} 
-                alt="Automação WhatsApp" 
+                alt="Integração WhatsApp Business" 
                 className="w-full rounded-lg"
               />
               <div className="mt-6 text-center">
                 <h4 className="text-lg font-semibold text-telein-blue mb-2">
-                  Lista de interessados e automação de mensagens WhatsApp
+                  Integre facilmente com seu WhatsApp Business
                 </h4>
                 <p className="text-muted-foreground">
-                  Prontos para conversar e comprar
+                  Conecta como WhatsApp Web e chama leads interessados automaticamente
                 </p>
               </div>
             </div>
