@@ -1,4 +1,4 @@
-import { CreditCard, Home, Phone, Heart, Shield } from "lucide-react";
+import { CreditCard, Home, Phone, Heart, Shield, Smartphone } from "lucide-react";
 
 const Segments = () => {
   const segments = [
@@ -26,6 +26,11 @@ const Segments = () => {
       icon: Shield,
       title: "Seguradoras",
       description: "Faça campanhas diárias para sua base de leads. Oferte seguros auto, vida e residencial aquecendo suas vendas com contatos interessados."
+    },
+    {
+      icon: Smartphone,
+      title: "Produtos Digitais",
+      description: "Cursos online, aplicativos, software e infoprodutos. Qualifique leads interessados em soluções digitais e aumente suas conversões automaticamente."
     }
   ];
 
