@@ -21,7 +21,7 @@ const CTA = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Urgency Header */}
           <div className="bg-telein-orange text-white px-6 py-2 rounded-full inline-block mb-8 font-semibold animate-pulse">
-            ⚡ OFERTA LIMITADA - Apenas para os primeiros 50 clientes
+            🚀 ACELERE SUAS VENDAS - Comece hoje mesmo sem fidelidade
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
