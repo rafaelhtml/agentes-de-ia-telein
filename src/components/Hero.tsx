@@ -43,7 +43,12 @@ const Hero = () => {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="cta" size="xl" className="animate-pulse-glow">
+              <Button 
+                variant="cta" 
+                size="xl" 
+                className="animate-pulse-glow"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Phone className="mr-2" />
                 Teste Grátis (2000 Ligações)
               </Button>

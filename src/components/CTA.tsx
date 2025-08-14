@@ -50,6 +50,7 @@ const CTA = () => {
               variant="cta" 
               size="xl" 
               className="text-xl py-6 px-12 animate-pulse-glow"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <Phone className="mr-3 h-6 w-6" />
               TESTE GRÁTIS (2000 LIGAÇÕES)
@@ -59,6 +60,7 @@ const CTA = () => {
               variant="outline_light" 
               size="xl"
               className="text-xl py-6 px-12"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <MessageSquare className="mr-3 h-6 w-6" />
               Falar com Especialista

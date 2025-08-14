@@ -78,7 +78,12 @@ const Solution = () => {
               ))}
             </div>
             
-            <Button variant="cta" size="xl" className="w-full sm:w-auto">
+            <Button 
+              variant="cta" 
+              size="xl" 
+              className="w-full sm:w-auto"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               <Phone className="mr-2" />
               Quero Começar Agora
             </Button>

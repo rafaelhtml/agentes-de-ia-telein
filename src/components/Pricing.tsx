@@ -114,6 +114,7 @@ const Pricing = () => {
               <Button 
                 variant={plan.popular ? "cta" : "outline"} 
                 className="w-full"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 CONTRATAR
               </Button>
@@ -139,7 +140,11 @@ const Pricing = () => {
             <Button variant="outline_light" size="lg">
               Ver Outros Planos
             </Button>
-            <Button variant="cta" size="lg">
+            <Button 
+              variant="cta" 
+              size="lg"
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Solicitar Plano Customizado
             </Button>
           </div>

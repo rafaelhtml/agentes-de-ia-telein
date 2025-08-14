@@ -3,6 +3,7 @@ import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
 import Segments from "@/components/Segments";
 import Pricing from "@/components/Pricing";
+import ContactForm from "@/components/ContactForm";
 import CTA from "@/components/CTA";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       <Solution />
       <Segments />
       <Pricing />
+      <ContactForm />
       <CTA />
     </div>
   );
