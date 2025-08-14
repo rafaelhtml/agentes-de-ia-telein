@@ -20,7 +20,7 @@ const CTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Urgency Header */}
-          <div className="bg-telein-orange text-background px-6 py-2 rounded-full inline-block mb-8 font-semibold animate-pulse">
+          <div className="bg-telein-orange text-white px-6 py-2 rounded-full inline-block mb-8 font-semibold animate-pulse">
             ⚡ OFERTA LIMITADA - Apenas para os primeiros 50 clientes
           </div>
           

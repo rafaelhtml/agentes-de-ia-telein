@@ -51,7 +51,12 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
-				},
+			},
+			// Telein Brand Colors
+			'telein-navy': 'hsl(var(--telein-navy))',
+			'telein-blue': 'hsl(var(--telein-blue))',
+			'telein-orange': 'hsl(var(--telein-orange))',
+			'telein-gray': 'hsl(var(--telein-gray))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
