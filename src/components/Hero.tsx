@@ -34,7 +34,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
-                Nosso robô de vendas liga automaticamente para sua base de contatos, filtra interessados e gera leads qualificados prontos para sua equipe fechar.
+                Sistema liga para sua lista de contatos, filtra quem demonstrou interesse e chama no Whatsapp Automáticamente.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
                 *Tecnologia URA Reversa
