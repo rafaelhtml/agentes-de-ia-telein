@@ -66,32 +66,63 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Video/Demo Section */}
+          {/* Comparison Section */}
           <div className="lg:justify-self-end">
             <div className="bg-card shadow-telein-card rounded-2xl p-8 space-y-6 animate-float">
-              <div className="bg-gradient-feature rounded-lg p-6 text-center">
-                <Phone className="mx-auto mb-4 h-12 w-12 text-accent-foreground" />
-                <h3 className="text-xl font-semibold text-accent-foreground mb-2">
-                  Sistema Ativo Agora
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-semibold mb-2">
+                  Humano vs Robô Telein
                 </h3>
-                <p className="text-accent-foreground/80">
-                  Realizando ligações automatizadas
+                <p className="text-sm text-muted-foreground">
+                  Comparativo de performance em 1 hora
                 </p>
               </div>
               
+              {/* Comparison Table */}
               <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Ligações hoje</span>
-                  <span className="text-telein-blue font-semibold">2.847</span>
+                {/* Header */}
+                <div className="grid grid-cols-3 gap-4 pb-2 border-b border-border">
+                  <div className="text-xs font-medium text-muted-foreground"></div>
+                  <div className="text-xs font-medium text-center text-muted-foreground">👤 Humano</div>
+                  <div className="text-xs font-medium text-center text-telein-blue">🤖 Robô Telein</div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Leads qualificados</span>
-                  <span className="text-telein-orange font-semibold">342</span>
+                
+                {/* Ligações */}
+                <div className="grid grid-cols-3 gap-4 items-center">
+                  <span className="text-sm">Ligações/hora</span>
+                  <span className="text-center text-sm">~20</span>
+                  <span className="text-center text-telein-blue font-semibold">150</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-muted-foreground">Taxa de conversão</span>
-                  <span className="text-telein-blue font-semibold">12%</span>
+                
+                {/* Atendidas */}
+                <div className="grid grid-cols-3 gap-4 items-center">
+                  <span className="text-sm">Atendidas</span>
+                  <span className="text-center text-sm">~4</span>
+                  <span className="text-center text-telein-blue font-semibold">40</span>
                 </div>
+                
+                {/* Leads qualificados */}
+                <div className="grid grid-cols-3 gap-4 items-center">
+                  <span className="text-sm">Leads qualificados</span>
+                  <span className="text-center text-sm">0-1</span>
+                  <span className="text-center text-telein-orange font-semibold">4-8</span>
+                </div>
+                
+                {/* Custo */}
+                <div className="grid grid-cols-3 gap-4 items-center pt-2 border-t border-border">
+                  <span className="text-sm font-medium">Custo mensal</span>
+                  <span className="text-center text-sm">R$ 3.000+</span>
+                  <span className="text-center text-telein-orange font-semibold">R$ 297</span>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-feature rounded-lg p-4 text-center mt-6">
+                <p className="text-xs text-accent-foreground/90 font-medium">
+                  💡 Você pode ter vários robôs trabalhando em paralelo
+                </p>
+                <p className="text-xs text-accent-foreground/70 mt-1">
+                  Multiplique seus resultados sem aumentar custos proporcionalmente
+                </p>
               </div>
             </div>
           </div>
