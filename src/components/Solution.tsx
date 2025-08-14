@@ -4,11 +4,14 @@ import whatsappImage from "@/assets/whatsapp-automation.jpg";
 
 const Solution = () => {
   const benefits = [
-    "Automatiza 100% das ligações de prospecção",
+    "Liga automaticamente para toda sua base de contatos",
     "Áudio com IA direto na plataforma - sem gravações",
     "Assistente IA cria 3 opções de copy automaticamente",
-    "Cliente responde por tecla ou palavra-chave",
-    "Oferece WhatsApp (API oficial/não oficial) e SMS para contato",
+    "Filtra e identifica apenas os contatos interessados",
+    "Gera lista qualificada automaticamente",
+    "Automatiza mensagens via WhatsApp (API oficial/não oficial)",
+    "Envia SMS automatizado para leads interessados",
+    "Integra com CRMs via webhook para informar outros sistemas",
     "Funciona seg-sex 9h às 19h e sáb 9h às 14h",
     "Planos diários, semanais e mensais - únicos no mercado",
     "Sem contrato de fidelidade - cancele quando quiser",
@@ -26,14 +29,14 @@ const Solution = () => {
     {
       step: "2", 
       icon: Target,
-      title: "Cliente demonstra interesse",
-      description: "Responde por tecla ou palavra-chave que você definiu"
+      title: "Filtra interessados",
+      description: "Identifica e separa apenas contatos que demonstraram interesse real"
     },
     {
       step: "3",
       icon: MessageSquare,
-      title: "Oferece contato direto",
-      description: "Possibilita contato via WhatsApp, SMS ou integração com seu CRM"
+      title: "Gera lista e automatiza contato",
+      description: "Cria lista de interessados e oferece automação via WhatsApp, SMS ou webhook"
     },
     {
       step: "4",
@@ -53,8 +56,7 @@ const Solution = () => {
             <span className="text-telein-blue block">estava esperando</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nosso sistema automatizado liga para sua base, qualifica quem tem interesse real 
-            e entrega apenas clientes prontos para sua equipe de vendas.
+            Nosso sistema liga para sua base de contatos, filtra quem demonstrou interesse real, gera uma lista qualificada e oferece automação de contato via WhatsApp, SMS ou integração com seu CRM via webhook.
             <span className="block text-sm mt-2 opacity-75">*Sistema URA Reversa Telein</span>
           </p>
         </div>
@@ -91,7 +93,7 @@ const Solution = () => {
               />
               <div className="mt-6 text-center">
                 <h4 className="text-lg font-semibold text-telein-blue mb-2">
-                  Possibilita contato direto via WhatsApp com leads interessados
+                  Lista de interessados e automação de mensagens WhatsApp
                 </h4>
                 <p className="text-muted-foreground">
                   Prontos para conversar e comprar
