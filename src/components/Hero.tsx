@@ -26,13 +26,14 @@ const Hero = () => {
             
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                <span className="text-telein-blue block">Pare de perder tempo</span>
-                com leads frios e receba no WhatsApp
-                <span className="text-telein-orange block">apenas quem quer comprar</span>
+                E se você recebesse
+                <span className="text-telein-blue block">leads interessados</span>
+                no seu WhatsApp
+                <span className="text-telein-orange block">todos os dias?</span>
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
-                Faz milhares de ligações automáticas, qualifica interessados e conecta direto no seu WhatsApp apenas quem demonstrou interesse real em comprar.
+                Nosso robô liga automaticamente para sua base, qualifica quem tem interesse real e entrega no seu WhatsApp apenas clientes prontos para comprar.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
                 *Tecnologia URA Reversa
