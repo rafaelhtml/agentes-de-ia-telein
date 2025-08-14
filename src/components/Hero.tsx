@@ -34,7 +34,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
-                Sistema liga para milhares de contatos, filtra quem demonstrou interesse e gera lista qualificada. Oferece automação via WhatsApp, SMS ou webhook para CRM.
+                Nosso robô de vendas liga automaticamente para sua base de contatos, filtra interessados e gera leads qualificados prontos para sua equipe fechar.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
                 *Tecnologia URA Reversa
