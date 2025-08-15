@@ -41,7 +41,7 @@ const ContactForm = () => {
       console.log('Enviando dados para webhook:', dataToSend);
 
       // Enviar dados para o webhook
-      const response = await fetch('http://www.liguemassa.com.br/converter.php', {
+      const response = await fetch('https://webhook.site/68193ed4-1102-49ea-aee8-4e2f153e8963', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
