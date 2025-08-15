@@ -60,12 +60,17 @@ const Problem = () => {
         <div className="mt-16 text-center">
           <div className="bg-gradient-hero rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-telein-orange mb-4">
-              Resultado: Vendas estagnadas e equipe desmotivada
+              Pare de depender de indicações e de esperar o cliente lembrar que você existe
             </h3>
-            <p className="text-lg text-muted-foreground">
-              Enquanto você faz ligações manuais, seus concorrentes já estão automatizando 
-              e fechando muito mais vendas com menos esforço.
+            <p className="text-lg text-muted-foreground mb-6">
+              Enquanto você espera passivamente por indicações ou pelo cliente te procurar, 
+              seus concorrentes estão sendo proativos e conquistando esses mesmos clientes primeiro.
             </p>
+            <div className="bg-card/50 rounded-xl p-6 border border-telein-orange/20">
+              <p className="text-lg font-semibold text-foreground">
+                🎯 Seja você quem encontra o cliente, não quem espera ser encontrado
+              </p>
+            </div>
           </div>
         </div>
       </div>
