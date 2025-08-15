@@ -16,10 +16,45 @@ const ContactForm = () => {
     segment: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    console.log("Form data:", formData);
+    
+    try {
+      // Capturar parâmetros da URL se existirem
+      const urlParams = new URLSearchParams(window.location.search);
+      
+      // Preparar dados para envio
+      const dataToSend = {
+        origem: "UraReversa",
+        Nome: formData.name,
+        Email: formData.email,
+        "Qual_seu_segmento?": formData.segment,
+        "Seu_Whatsapp": formData.whatsapp,
+        "Quantidade_de_Funcionários": formData.employees,
+        Empresa: formData.company,
+        ...(urlParams.get('anuncio') && { anuncio: urlParams.get('anuncio') }),
+        ...(urlParams.get('campanha') && { campanha: urlParams.get('campanha') }),
+        ...(urlParams.get('posicionamento') && { posicionamento: urlParams.get('posicionamento') }),
+        ...(urlParams.get('conjuntodeanuncio') && { conjuntodeanuncio: urlParams.get('conjuntodeanuncio') })
+      };
+
+      // Enviar dados para o webhook
+      await fetch('http://www.liguemassa.com.br/converter.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend)
+      });
+
+      // Redirecionar para o pixel do WhatsApp
+      window.location.href = 'https://ipbxinteligente.com.br/pixel_whatsapp.php';
+      
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
+      // Em caso de erro, ainda redireciona
+      window.location.href = 'https://ipbxinteligente.com.br/pixel_whatsapp.php';
+    }
   };
 
   const segments = [
