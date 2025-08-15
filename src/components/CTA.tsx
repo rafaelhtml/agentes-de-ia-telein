@@ -70,21 +70,21 @@ const CTA = () => {
           {/* Value Proposition */}
           <div className="bg-card rounded-2xl p-8 shadow-telein-card max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-telein-orange mb-4">
-              Resultados que você vai conquistar:
+              Você não precisa aumentar sua equipe:
             </h3>
             
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-telein-blue mb-2">3x mais</div>
-                <p className="text-muted-foreground">Contatos qualificados por dia</p>
+                <div className="text-3xl font-bold text-telein-blue mb-2">Otimize</div>
+                <p className="text-muted-foreground">Sua equipe atual sem contratar</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-telein-orange mb-2">80%</div>
-                <p className="text-muted-foreground">Redução no tempo de prospecção</p>
+                <div className="text-3xl font-bold text-telein-orange mb-2">Leads</div>
+                <p className="text-muted-foreground">Mais qualificados para seu time</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-telein-blue mb-2">24h</div>
-                <p className="text-muted-foreground">Robôs trabalhando sem parar</p>
+                <div className="text-3xl font-bold text-telein-blue mb-2">Resultados</div>
+                <p className="text-muted-foreground">Melhores com os mesmos vendedores</p>
               </div>
             </div>
           </div>
