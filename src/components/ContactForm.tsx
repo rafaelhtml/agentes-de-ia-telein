@@ -38,22 +38,21 @@ const ContactForm = () => {
         ...(urlParams.get('conjuntodeanuncio') && { conjuntodeanuncio: urlParams.get('conjuntodeanuncio') })
       };
 
-      console.log('Enviando dados para webhook:', dataToSend);
+      console.log('Enviando dados para converter:', dataToSend);
 
-      // Enviar dados para o webhook
-      const response = await fetch('https://webhook.site/68193ed4-1102-49ea-aee8-4e2f153e8963', {
+      // Enviar dados para o converter e redirecionar para a mesma URL
+      const response = await fetch('http://www.liguemassa.com.br/converter_pixel_lov.php', {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(dataToSend)
       });
 
-      console.log('Resposta do webhook:', response);
+      console.log('Resposta do converter:', response);
 
-      // Redirecionar para o pixel do WhatsApp
-      window.location.href = 'https://ipbxinteligente.com.br/pixel_whatsapp.php';
+      // Redirecionar para a mesma URL após enviar os dados
+      window.location.href = 'http://www.liguemassa.com.br/converter_pixel_lov.php';
       
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
