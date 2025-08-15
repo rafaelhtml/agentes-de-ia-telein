@@ -29,12 +29,12 @@ const Problem = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Sua equipe está perdendo
-            <span className="text-telein-orange block">tempo e dinheiro</span>
-            fazendo ligações manuais?
+            Você não precisa aumentar a sua equipe,
+            <span className="text-telein-orange block">e sim otimizar a equipe atual</span>
+            entregando leads mais qualificados.
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Enquanto você liga manualmente para leads frios, poderia ter um robô fazendo isso 24h 
+            Enquanto você liga manualmente para leads frios, poderia ter um robô fazendo isso todos os dias 
             e entregando apenas clientes interessados para sua equipe.
           </p>
         </div>
