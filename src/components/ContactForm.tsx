@@ -57,7 +57,7 @@ const ContactForm = () => {
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
       // Em caso de erro, ainda redireciona
-      window.location.href = 'https://ipbxinteligente.com.br/pixel_whatsapp.php';
+      window.location.href = 'http://www.liguemassa.com.br/converter_pixel_lov.php';
     }
   };
 
