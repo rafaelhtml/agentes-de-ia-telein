@@ -58,18 +58,41 @@ const Problem = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="bg-gradient-hero rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-telein-orange mb-4">
-              Pare de depender de indicações e de esperar o cliente lembrar que você existe
-            </h3>
-            <p className="text-lg text-muted-foreground mb-6">
-              Enquanto você espera passivamente por indicações ou pelo cliente te procurar, 
-              seus concorrentes estão sendo proativos e conquistando esses mesmos clientes primeiro.
-            </p>
-            <div className="bg-card/50 rounded-xl p-6 border border-telein-orange/20">
-              <p className="text-lg font-semibold text-foreground">
-                🎯 Seja você quem encontra o cliente, não quem espera ser encontrado
-              </p>
+          <div className="bg-gradient-to-r from-telein-orange/10 to-telein-blue/10 rounded-2xl p-8 max-w-5xl mx-auto border border-telein-orange/30">
+            <div className="bg-card/80 backdrop-blur-sm rounded-xl p-8 shadow-telein-glow">
+              <h3 className="text-3xl font-bold mb-6">
+                Pare de depender de <span className="text-telein-orange underline decoration-wavy">indicações</span> e de 
+                <span className="text-telein-blue block mt-2">esperar o cliente lembrar que você existe</span>
+              </h3>
+              
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="text-left">
+                  <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 mb-4">
+                    <h4 className="font-semibold text-red-400 mb-2">❌ Estratégia passiva:</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Aguardar indicações • Esperar o telefone tocar • Torcer para lembrarem de você
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="text-left">
+                  <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mb-4">
+                    <h4 className="font-semibold text-green-400 mb-2">✅ Estratégia proativa:</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Buscar clientes ativamente • Estar sempre na mente do prospect • Gerar oportunidades constantemente
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8 bg-gradient-to-r from-telein-orange to-telein-blue p-6 rounded-xl text-white">
+                <p className="text-xl font-bold mb-2">
+                  🎯 Seja você quem encontra o cliente, não quem espera ser encontrado
+                </p>
+                <p className="text-white/90">
+                  Enquanto seus concorrentes esperam, você estará conquistando novos negócios todos os dias
+                </p>
+              </div>
             </div>
           </div>
         </div>
