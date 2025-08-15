@@ -38,25 +38,29 @@ const ContactForm = () => {
         ...(urlParams.get('conjuntodeanuncio') && { conjuntodeanuncio: urlParams.get('conjuntodeanuncio') })
       };
 
-      console.log('Enviando dados para converter:', dataToSend);
+      console.log('Enviando dados via POST form:', dataToSend);
 
-      // Enviar dados para o converter e redirecionar para a mesma URL
-      const response = await fetch('http://www.liguemassa.com.br/converter_pixel_lov.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dataToSend)
+      // Criar form dinâmico para envio POST
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = 'http://www.liguemassa.com.br/converter_pixel_lov.php';
+      
+      // Adicionar todos os campos como inputs ocultos
+      Object.entries(dataToSend).forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = String(value);
+        form.appendChild(input);
       });
-
-      console.log('Resposta do converter:', response);
-
-      // Redirecionar para a mesma URL após enviar os dados
-      window.location.href = 'http://www.liguemassa.com.br/converter_pixel_lov.php';
+      
+      // Adicionar form ao DOM e submeter
+      document.body.appendChild(form);
+      form.submit();
       
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
-      // Em caso de erro, ainda redireciona
+      // Em caso de erro, redireciona sem dados
       window.location.href = 'http://www.liguemassa.com.br/converter_pixel_lov.php';
     }
   };
