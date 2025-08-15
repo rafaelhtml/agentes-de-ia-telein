@@ -38,14 +38,19 @@ const ContactForm = () => {
         ...(urlParams.get('conjuntodeanuncio') && { conjuntodeanuncio: urlParams.get('conjuntodeanuncio') })
       };
 
+      console.log('Enviando dados para webhook:', dataToSend);
+
       // Enviar dados para o webhook
-      await fetch('http://www.liguemassa.com.br/converter.php', {
+      const response = await fetch('http://www.liguemassa.com.br/converter.php', {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(dataToSend)
       });
+
+      console.log('Resposta do webhook:', response);
 
       // Redirecionar para o pixel do WhatsApp
       window.location.href = 'https://ipbxinteligente.com.br/pixel_whatsapp.php';
