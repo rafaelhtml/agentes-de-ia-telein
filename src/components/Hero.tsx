@@ -52,7 +52,11 @@ const Hero = () => {
                 <Phone className="mr-2" />
                 Teste Grátis (2000 Ligações)
               </Button>
-              <Button variant="outline_light" size="xl">
+              <Button 
+                variant="outline_light" 
+                size="xl"
+                onClick={() => document.getElementById('video-demo')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Zap className="mr-2" />
                 Ver Demonstração
               </Button>

@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
+import VideoDemo from "@/components/VideoDemo";
 import Segments from "@/components/Segments";
 import AudioExamples from "@/components/AudioExamples";
 import Pricing from "@/components/Pricing";
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <Problem />
       <Solution />
+      <VideoDemo />
       <AudioExamples />
       <Segments />
       <Pricing />
