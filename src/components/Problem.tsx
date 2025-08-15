@@ -29,9 +29,8 @@ const Problem = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Você não precisa aumentar a sua equipe,
-            <span className="text-telein-orange block">e sim otimizar a equipe atual</span>
-            entregando leads mais qualificados.
+            <span className="text-telein-orange">Aumente as suas vendas</span>
+            <span className="block">sem precisar aumentar a sua equipe</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Enquanto você liga manualmente para leads frios, poderia ter um robô fazendo isso todos os dias 
