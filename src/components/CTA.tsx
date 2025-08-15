@@ -70,21 +70,21 @@ const CTA = () => {
           {/* Value Proposition */}
           <div className="bg-card rounded-2xl p-8 shadow-telein-card max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-telein-orange mb-4">
-              O que você ganha começando hoje:
+              Resultados que você vai conquistar:
             </h3>
             
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-telein-blue mb-2">14 anos</div>
-                <p className="text-muted-foreground">De experiência no mercado</p>
+                <div className="text-3xl font-bold text-telein-blue mb-2">3x mais</div>
+                <p className="text-muted-foreground">Contatos qualificados por dia</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-telein-orange mb-2">+10k</div>
-                <p className="text-muted-foreground">Clientes já atendidos</p>
+                <div className="text-3xl font-bold text-telein-orange mb-2">80%</div>
+                <p className="text-muted-foreground">Redução no tempo de prospecção</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-telein-blue mb-2">0 min</div>
-                <p className="text-muted-foreground">Setup automático com vídeos</p>
+                <div className="text-3xl font-bold text-telein-blue mb-2">24h</div>
+                <p className="text-muted-foreground">Robôs trabalhando sem parar</p>
               </div>
             </div>
           </div>
