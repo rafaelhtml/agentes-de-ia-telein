@@ -39,10 +39,13 @@ const Pricing = () => {
 
   const features = [
     "Telefonia inclusa",
-    "Pagamento On-line", 
+    "Bina números de celular", 
+    "Bina inteligente (mesmo DDD)",
     "Interface Web",
     "Áudio Gratuito",
-    "Fala nome do cliente"
+    "Reconhecimento de Voz com IA",
+    "Fala nome do cliente",
+    "Implantação imediata"
   ];
 
   return (
