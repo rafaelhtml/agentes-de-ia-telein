@@ -42,7 +42,7 @@ const Pricing = () => {
     "Bina números de celular", 
     "Bina inteligente (mesmo DDD)",
     "Interface Web",
-    "Áudio Gratuito",
+    "Áudios e Mailings Ilimitados",
     "Reconhecimento de Voz com IA",
     "Fala nome do cliente",
     "Implantação imediata"
