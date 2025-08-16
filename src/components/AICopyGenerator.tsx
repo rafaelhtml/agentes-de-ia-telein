@@ -119,15 +119,16 @@ const AICopyGenerator = () => {
               </div>
 
               {/* Example Box */}
-              <div className="bg-telein-blue text-white rounded-xl p-6">
-                <h4 className="font-bold mb-3">Exemplo de Copy Gerada:</h4>
-                <div className="bg-white/10 rounded-lg p-4 text-sm">
-                  <p className="mb-2">
-                    "Olá [Nome]! Você sabia que pode economizar até 95% na sua conta de energia? 
-                    Se você deseja reduzir seus gastos mensais, digite 1 agora para saber mais!"
-                  </p>
-                  <div className="text-xs text-white/70 mt-2">
-                    ⚡ Gerado automaticamente para o nicho "Energia Solar"
+              <div className="bg-card rounded-xl p-6 shadow-telein-card">
+                <h4 className="font-bold text-telein-blue mb-4">Veja o Gerador em Ação:</h4>
+                <div className="bg-gradient-feature rounded-lg p-4">
+                  <img 
+                    src="/lovable-uploads/a18fe064-8278-4c2b-b855-2d46cd8577a4.png" 
+                    alt="Exemplo do gerador de IA criando copy para energia solar"
+                    className="w-full rounded-lg shadow-lg"
+                  />
+                  <div className="text-xs text-muted-foreground mt-3 text-center">
+                    ⚡ IA gerando automaticamente 3 opções de copy para o nicho "Energia Solar"
                   </div>
                 </div>
               </div>
