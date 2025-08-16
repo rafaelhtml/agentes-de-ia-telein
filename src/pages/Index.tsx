@@ -5,6 +5,7 @@ import VideoDemo from "@/components/VideoDemo";
 import Segments from "@/components/Segments";
 import AudioExamples from "@/components/AudioExamples";
 import Pricing from "@/components/Pricing";
+import Affiliate from "@/components/Affiliate";
 import ContactForm from "@/components/ContactForm";
 import CTA from "@/components/CTA";
 
@@ -18,6 +19,7 @@ const Index = () => {
       <AudioExamples />
       <Segments />
       <Pricing />
+      <Affiliate />
       <CTA />
       <ContactForm />
     </div>
