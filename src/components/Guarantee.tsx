@@ -19,7 +19,7 @@ const Guarantee = () => {
 
           <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
             Estamos tão confiantes na qualidade da nossa solução que oferecemos 
-            <strong> 7 dias de garantia total</strong>. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.
+            <strong> 7 dias de garantia total</strong>. Se não ficar satisfeito, processamos seu reembolso de forma justa e transparente.
           </p>
 
           {/* Features */}
@@ -42,9 +42,9 @@ const Guarantee = () => {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
               <RefreshCw className="h-12 w-12 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">100% do Valor</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Processo Rápido</h3>
               <p className="text-gray-600">
-                Devolvemos todo o valor investido, sem taxas ou complicações
+                Reembolso processado de forma ágil e transparente, sem burocracias
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ const Guarantee = () => {
             </h3>
             <p className="text-gray-600 mb-6 text-lg">
               Comece hoje mesmo e veja os resultados. Se não ficar satisfeito, 
-              é só solicitar o reembolso total em até 7 dias.
+              é só solicitar o reembolso em até 7 dias.
             </p>
             <Button 
               variant="cta" 
