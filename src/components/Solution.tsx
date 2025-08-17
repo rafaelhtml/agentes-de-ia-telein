@@ -93,8 +93,8 @@ const Solution = () => {
           <div className="relative">
             <div className="bg-card rounded-2xl p-8 shadow-telein-card">
               <img 
-                src={whatsappImage} 
-                alt="Integração WhatsApp Business" 
+                src="/lovable-uploads/39213192-5281-40ae-b588-e665781e12ce.png" 
+                alt="Integração WhatsApp Web e API Oficial" 
                 className="w-full rounded-lg"
               />
               <div className="mt-6 text-center">
