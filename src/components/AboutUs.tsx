@@ -58,16 +58,10 @@ const AboutUs = () => {
 
             <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-xl p-6 text-white">
               <h3 className="text-xl font-bold mb-3">Nossa Missão</h3>
-              <p className="text-blue-100 mb-4">
+              <p className="text-blue-100">
                 Automatizar processos de vendas e entregar leads qualificados 
                 para maximizar resultados dos nossos clientes.
               </p>
-              <Button 
-                variant="outline" 
-                className="bg-white/10 border-white/20 text-white hover:bg-white/20"
-              >
-                Conheça Nossa Solução
-              </Button>
             </div>
           </div>
 
