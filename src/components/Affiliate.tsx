@@ -65,11 +65,11 @@ const Affiliate = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">1</div>
-                  <p className="text-white text-lg font-medium">Cadastre-se no programa</p>
+                  <p className="text-white text-lg font-medium">Tenha seu cadastro na URA Reversa</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">2</div>
-                  <p className="text-white text-lg font-medium">Receba seu link personalizado</p>
+                  <p className="text-white text-lg font-medium">Acesse seu link na página de recargas</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">3</div>
