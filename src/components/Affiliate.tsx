@@ -10,13 +10,14 @@ const Affiliate = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 mb-4">
               <Users className="h-8 w-8 text-telein-orange" />
-              <h2 className="text-3xl md:text-5xl font-bold text-telein-blue">
-                Programa de Indicação
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
+                Indique e Ganhe!
               </h2>
               <Users className="h-8 w-8 text-telein-orange" />
             </div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ganhe dinheiro divulgando nossa solução de vendas automatizada
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Indique nosso sistema e ganhe 5% de todas as recargas realizadas por 12 meses. 
+              Seu amigo ainda ganha R$50,00 de desconto!
             </p>
           </div>
 
@@ -30,33 +31,33 @@ const Affiliate = () => {
                     <DollarSign className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-telein-blue">5% de Comissão Vitalícia</h3>
-                    <p className="text-muted-foreground">Para cada cliente que você indicar</p>
+                    <h3 className="text-2xl font-bold text-telein-blue">5% por 12 Meses</h3>
+                    <p className="text-muted-foreground">De todas as recargas do seu indicado</p>
                   </div>
                 </div>
                 
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <Link className="h-5 w-5 text-telein-blue mt-1" />
+                    <DollarSign className="h-5 w-5 text-telein-blue mt-1" />
                     <div>
-                      <h4 className="font-semibold">Link Personalizado</h4>
-                      <p className="text-sm text-muted-foreground">Receba seu link único de indicação</p>
+                      <h4 className="font-semibold">Seu Amigo Ganha R$50,00</h4>
+                      <p className="text-sm text-muted-foreground">Desconto na primeira recarga</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
                     <TrendingUp className="h-5 w-5 text-telein-blue mt-1" />
                     <div>
-                      <h4 className="font-semibold">Comissão Automática</h4>
-                      <p className="text-sm text-muted-foreground">Receba automaticamente 5% sobre todos os pagamentos</p>
+                      <h4 className="font-semibold">Você Ganha 5%</h4>
+                      <p className="text-sm text-muted-foreground">De todas as recargas por 12 meses</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
                     <Users className="h-5 w-5 text-telein-blue mt-1" />
                     <div>
-                      <h4 className="font-semibold">Renda Vitalícia</h4>
-                      <p className="text-sm text-muted-foreground">Ganhe enquanto seus indicados permanecerem clientes</p>
+                      <h4 className="font-semibold">Pagamento Automático</h4>
+                      <p className="text-sm text-muted-foreground">Receba diretamente na sua conta</p>
                     </div>
                   </div>
                 </div>
@@ -66,23 +67,28 @@ const Affiliate = () => {
             {/* Right Content */}
             <div className="space-y-6">
               <div className="bg-telein-blue text-white rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-4">Como Funciona?</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="bg-telein-orange text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</div>
-                    <p>Cadastre-se no programa de indicação</p>
+                <h3 className="text-2xl font-bold mb-4">Texto para Enviar</h3>
+                <div className="bg-white/10 rounded-xl p-4 mb-6">
+                  <p className="text-sm leading-relaxed">
+                    "Olá, estou te enviando um desconto de R$ 50,00 Reais para conhecer a URA 
+                    Reversa da IPTX Inteligente Telein, basta clicar no link e se cadastrar agora 
+                    para utilizar hoje mesmo."
+                  </p>
+                </div>
+                
+                <h4 className="font-semibold mb-3">Como Funciona:</h4>
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-start gap-2">
+                    <div className="bg-telein-orange text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5">1</div>
+                    <p>Envie o texto acima para seus contatos</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="bg-telein-orange text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</div>
-                    <p>Receba seu link personalizado</p>
+                  <div className="flex items-start gap-2">
+                    <div className="bg-telein-orange text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5">2</div>
+                    <p>Eles ganham R$50 de desconto</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="bg-telein-orange text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</div>
-                    <p>Divulgue para sua rede de contatos</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="bg-telein-orange text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</div>
-                    <p>Receba 5% de comissão vitalícia</p>
+                  <div className="flex items-start gap-2">
+                    <div className="bg-telein-orange text-white rounded-full w-5 h-5 flex items-center justify-center text-xs font-bold mt-0.5">3</div>
+                    <p>Você ganha 5% por 12 meses</p>
                   </div>
                 </div>
               </div>
@@ -93,10 +99,10 @@ const Affiliate = () => {
                   size="lg"
                   onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                 >
-                  Quero Ser Afiliado
+                  Participar do Programa
                 </Button>
                 <p className="text-sm text-muted-foreground mt-3">
-                  💰 Comece a ganhar dinheiro indicando nossa solução
+                  💰 Ganhe 5% por 12 meses de cada indicação
                 </p>
               </div>
             </div>
