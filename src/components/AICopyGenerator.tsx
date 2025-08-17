@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Brain, Target, MessageCircle, Sparkles, Zap, TrendingUp } from "lucide-react";
+import processImage from "@/assets/ia-copy-process-enhanced.png";
 
 const AICopyGenerator = () => {
   const features = [
@@ -107,6 +108,15 @@ const AICopyGenerator = () => {
                     <p className="text-xs text-muted-foreground">{feature.description}</p>
                   </div>
                 ))}
+              </div>
+
+              {/* Visual Example */}
+              <div className="mt-8 text-center">
+                <img 
+                  src={processImage}
+                  alt="Processo da IA para geração de copy em 4 passos com melhor contraste"
+                  className="w-full max-w-3xl mx-auto rounded-lg shadow-lg"
+                />
               </div>
             </div>
 
