@@ -13,31 +13,16 @@ const AboutUs = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Especialistas em Automação de Vendas
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Somos uma empresa pernambucana especializada em soluções de automação para vendas, 
-            com foco em URA Reversa e integração com WhatsApp para maximizar seus resultados.
+          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            Empresa pernambucana com 14 anos de experiência em soluções de automação para vendas 
+            e forte presença no mercado nacional.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Imagem da Equipe */}
-          <div className="relative">
-            <img 
-              src="/lovable-uploads/8e4f4413-b9a1-4094-a666-29aa5a7517e8.png"
-              alt="Equipe Telein em confraternização da empresa"
-              className="rounded-2xl shadow-2xl w-full"
-            />
-            <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-lg border">
-              <div className="flex items-center gap-2">
-                <Users className="h-6 w-6 text-blue-600" />
-                <span className="font-bold text-gray-900">Time Telein</span>
-              </div>
-            </div>
-          </div>
-
           {/* Conteúdo */}
           <div className="space-y-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-6">
               <div className="bg-white rounded-xl p-6 shadow-lg border">
                 <MapPin className="h-8 w-8 text-blue-600 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">Recife, PE</h3>
@@ -48,17 +33,17 @@ const AboutUs = () => {
 
               <div className="bg-white rounded-xl p-6 shadow-lg border">
                 <Award className="h-8 w-8 text-green-600 mb-3" />
-                <h3 className="font-bold text-gray-900 mb-2">Especialização</h3>
+                <h3 className="font-bold text-gray-900 mb-2">14 Anos</h3>
                 <p className="text-gray-600 text-sm">
-                  Foco total em automação de vendas e qualificação de leads
+                  Experiência consolidada em automação de vendas
                 </p>
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-lg border">
                 <Users className="h-8 w-8 text-purple-600 mb-3" />
-                <h3 className="font-bold text-gray-900 mb-2">Equipe Dedicada</h3>
+                <h3 className="font-bold text-gray-900 mb-2">Equipe Especializada</h3>
                 <p className="text-gray-600 text-sm">
-                  Profissionais experientes em telecomunicações e vendas
+                  Profissionais experientes em telecomunicações
                 </p>
               </div>
 
@@ -74,8 +59,8 @@ const AboutUs = () => {
             <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-xl p-6 text-white">
               <h3 className="text-xl font-bold mb-3">Nossa Missão</h3>
               <p className="text-blue-100 mb-4">
-                Transformar a forma como empresas fazem vendas, automatizando processos 
-                e entregando leads qualificados para maximizar resultados e reduzir custos.
+                Automatizar processos de vendas e entregar leads qualificados 
+                para maximizar resultados dos nossos clientes.
               </p>
               <Button 
                 variant="outline" 
@@ -83,6 +68,23 @@ const AboutUs = () => {
               >
                 Conheça Nossa Solução
               </Button>
+            </div>
+          </div>
+
+          {/* Imagem da Equipe */}
+          <div className="relative order-first lg:order-last">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img 
+                src="/lovable-uploads/8e4f4413-b9a1-4094-a666-29aa5a7517e8.png"
+                alt="Equipe Telein em confraternização da empresa"
+                className="w-full h-[400px] object-cover"
+              />
+              <div className="absolute bottom-4 left-4 bg-white rounded-xl p-3 shadow-lg">
+                <div className="flex items-center gap-2">
+                  <Users className="h-5 w-5 text-blue-600" />
+                  <span className="font-bold text-gray-900 text-sm">Time Telein</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -102,7 +104,7 @@ const AboutUs = () => {
             <div className="text-gray-600">Suporte Especializado</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">5 Anos</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">14 Anos</div>
             <div className="text-gray-600">de Experiência</div>
           </div>
         </div>
