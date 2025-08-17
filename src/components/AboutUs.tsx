@@ -89,25 +89,6 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-            <div className="text-gray-600">Empresas Atendidas</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-600 mb-2">300%</div>
-            <div className="text-gray-600">Aumento Médio em Vendas</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">Dedicado</div>
-            <div className="text-gray-600">Suporte Especializado</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-2">14 Anos</div>
-            <div className="text-gray-600">de Experiência</div>
-          </div>
-        </div>
       </div>
     </section>
   );
