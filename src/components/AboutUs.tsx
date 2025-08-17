@@ -42,7 +42,7 @@ const AboutUs = () => {
                 <MapPin className="h-8 w-8 text-blue-600 mb-3" />
                 <h3 className="font-bold text-gray-900 mb-2">Recife, PE</h3>
                 <p className="text-gray-600 text-sm">
-                  Empresa pernambucana com forte presença no mercado nordestino
+                  Empresa pernambucana com forte presença no mercado nacional
                 </p>
               </div>
 
