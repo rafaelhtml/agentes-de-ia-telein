@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Users, DollarSign, TrendingUp, Copy } from "lucide-react";
+import { Users, DollarSign, TrendingUp } from "lucide-react";
 
 const Affiliate = () => {
   return (
@@ -22,9 +22,9 @@ const Affiliate = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left Content - Benefits Card */}
-            <div className="bg-gray-900 rounded-3xl p-8 shadow-2xl transform hover:scale-105 transition-all duration-300">
+          <div className="flex justify-center">
+            {/* Benefits Card */}
+            <div className="bg-gray-900 rounded-3xl p-10 shadow-2xl transform hover:scale-105 transition-all duration-300 max-w-2xl w-full">
               <div className="flex items-center gap-4 mb-8">
                 <div className="bg-orange-500 text-white rounded-full p-4">
                   <DollarSign className="h-8 w-8" />
@@ -35,7 +35,7 @@ const Affiliate = () => {
                 </div>
               </div>
               
-              <div className="space-y-6">
+              <div className="space-y-6 mb-8">
                 <div className="flex items-center gap-4">
                   <DollarSign className="h-6 w-6 text-cyan-400 flex-shrink-0" />
                   <div>
@@ -60,41 +60,20 @@ const Affiliate = () => {
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Right Content - Text and Steps */}
-            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-2xl">
-              <h3 className="text-3xl font-bold text-white mb-6">Texto para Enviar</h3>
-              
-              <div className="bg-white/20 rounded-2xl p-6 mb-8">
-                <p className="text-white text-lg leading-relaxed font-medium">
-                  "Olá, estou te enviando um desconto de R$ 50,00 Reais para conhecer a URA 
-                  Reversa da IPTX Inteligente Telein, basta clicar no link e se cadastrar agora 
-                  para utilizar hoje mesmo."
-                </p>
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  className="mt-4 bg-white/20 border-white/30 text-white hover:bg-white/30"
-                >
-                  <Copy className="h-4 w-4 mr-2" />
-                  Copiar Texto
-                </Button>
-              </div>
-              
               <h4 className="font-bold text-white text-xl mb-6">Como Funciona:</h4>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">1</div>
-                  <p className="text-white text-lg font-medium">Envie o texto acima para seus contatos</p>
+                  <p className="text-white text-lg font-medium">Cadastre-se no programa</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">2</div>
-                  <p className="text-white text-lg font-medium">Eles ganham R$50 de desconto</p>
+                  <p className="text-white text-lg font-medium">Receba seu link personalizado</p>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">3</div>
-                  <p className="text-white text-lg font-medium">Você ganha 5% por 12 meses</p>
+                  <p className="text-white text-lg font-medium">Compartilhe e ganhe 5% por 12 meses</p>
                 </div>
               </div>
             </div>
