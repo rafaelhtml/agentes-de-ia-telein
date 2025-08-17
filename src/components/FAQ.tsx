@@ -1,6 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { HelpCircle } from "lucide-react";
+import { HelpCircle, MessageCircle, CheckCircle } from "lucide-react";
 
 const FAQ = () => {
   const faqItems = [
@@ -47,37 +47,58 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <Badge className="mb-4 text-sm font-medium bg-blue-100 text-blue-800 px-4 py-2">
-              <HelpCircle className="h-4 w-4 mr-2" />
-              Perguntas Frequentes
-            </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Tire suas Dúvidas
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-3 rounded-2xl">
+                <HelpCircle className="h-8 w-8 text-white" />
+              </div>
+              <Badge className="text-lg font-medium bg-white/10 text-white px-6 py-3 backdrop-blur-sm border border-white/20">
+                Perguntas Frequentes
+              </Badge>
+            </div>
+            <h2 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+              Tire suas <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Dúvidas</span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Encontre respostas para as principais dúvidas sobre nossa solução de URA Reversa
             </p>
           </div>
 
           {/* FAQ Content */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <Accordion type="single" collapsible className="space-y-4">
+          <div className="bg-white/5 backdrop-blur-md rounded-3xl shadow-2xl border border-white/10 p-8">
+            <Accordion type="single" collapsible className="space-y-6">
               {faqItems.map((item, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="border border-gray-200 rounded-lg px-6 py-2"
+                  className="border border-white/20 rounded-2xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-left text-lg font-semibold text-gray-900 hover:text-blue-600 hover:no-underline">
-                    {item.question}
+                  <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-blue-400 hover:no-underline px-6 py-4">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-2 rounded-lg mt-1 flex-shrink-0">
+                        <MessageCircle className="h-4 w-4 text-white" />
+                      </div>
+                      <span>{item.question}</span>
+                    </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-700 leading-relaxed">
-                    {item.answer}
+                  <AccordionContent className="text-gray-300 leading-relaxed px-6 pb-6">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-green-500 p-2 rounded-lg mt-1 flex-shrink-0">
+                        <CheckCircle className="h-4 w-4 text-white" />
+                      </div>
+                      <div>{item.answer}</div>
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -86,9 +107,13 @@ const FAQ = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-gray-600">
-              Não encontrou a resposta que procurava? Use nosso formulário de contato acima para esclarecer suas dúvidas.
-            </p>
+            <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Ainda tem dúvidas?</h3>
+              <p className="text-gray-300 text-lg">
+                Use nosso formulário de contato acima para esclarecer suas questões. 
+                Nossa equipe está pronta para ajudar você!
+              </p>
+            </div>
           </div>
         </div>
       </div>
