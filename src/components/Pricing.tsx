@@ -57,7 +57,10 @@ const Pricing = () => {
             <span className="text-telein-blue block">sua empresa</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Planos flexíveis sem fidelidade. Únicos no mercado com opções diárias, semanais e mensais.
+            Planos flexíveis sem fidelidade. <strong className="text-telein-blue">Únicos no mercado</strong> com opções 
+            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm font-bold mx-1">DIÁRIAS</span>
+            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm font-bold mx-1">SEMANAIS</span> e 
+            <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-sm font-bold mx-1">MENSAIS</span>
           </p>
         </div>
 
@@ -88,7 +91,15 @@ const Pricing = () => {
                   <span className="text-telein-orange text-4xl font-bold">{plan.price}</span>
                   <span className="text-telein-orange text-sm">,90</span>
                 </div>
-                <p className="text-muted-foreground text-sm">{plan.period}</p>
+                <div className={`inline-block px-4 py-2 rounded-full text-sm font-bold mt-2 ${
+                  plan.period === 'Diário' ? 'bg-green-100 text-green-800' :
+                  plan.period === 'Semanal' ? 'bg-blue-100 text-blue-800' :
+                  'bg-purple-100 text-purple-800'
+                }`}>
+                  {plan.period === 'Diário' && '💚 DIÁRIO'}
+                  {plan.period === 'Semanal' && '💙 SEMANAL'}
+                  {plan.period === 'Mensal' && '💜 MENSAL'}
+                </div>
               </div>
 
               {/* Features */}
