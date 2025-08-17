@@ -64,9 +64,9 @@ const AboutUs = () => {
 
               <div className="bg-white rounded-xl p-6 shadow-lg border">
                 <Clock className="h-8 w-8 text-orange-600 mb-3" />
-                <h3 className="font-bold text-gray-900 mb-2">Suporte 24/7</h3>
+                <h3 className="font-bold text-gray-900 mb-2">Suporte Especializado</h3>
                 <p className="text-gray-600 text-sm">
-                  Atendimento contínuo para garantir o sucesso dos nossos clientes
+                  Atendimento técnico qualificado para garantir o sucesso dos nossos clientes
                 </p>
               </div>
             </div>
@@ -98,8 +98,8 @@ const AboutUs = () => {
             <div className="text-gray-600">Aumento Médio em Vendas</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
-            <div className="text-gray-600">Suporte Disponível</div>
+            <div className="text-3xl font-bold text-orange-600 mb-2">Dedicado</div>
+            <div className="text-gray-600">Suporte Especializado</div>
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-orange-600 mb-2">5 Anos</div>
