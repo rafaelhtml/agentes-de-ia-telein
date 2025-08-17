@@ -42,10 +42,10 @@ const AICopyGenerator = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 mb-6">
               <Brain className="h-8 w-8 text-telein-orange" />
-              <h2 className="text-3xl md:text-5xl font-bold">
-                IA para Geração de 
-                <span className="text-telein-blue block">Copy de Prospecção</span>
-              </h2>
+            <h2 className="text-3xl md:text-5xl font-bold">
+              IA para Geração de 
+              <span className="text-telein-blue block">Copy de Ligação</span>
+            </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
               Nossa inteligência artificial cria automaticamente textos persuasivos personalizados 
