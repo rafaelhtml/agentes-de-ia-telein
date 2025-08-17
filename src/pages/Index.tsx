@@ -27,9 +27,9 @@ const Index = () => {
       <Pricing />
       <Affiliate />
       <Guarantee />
-      <FAQ />
       <CTA />
       <ContactForm />
+      <FAQ />
     </div>
   );
 };

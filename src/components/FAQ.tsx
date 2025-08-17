@@ -86,23 +86,9 @@ const FAQ = () => {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">
-              Não encontrou a resposta que procurava?
+            <p className="text-gray-600">
+              Não encontrou a resposta que procurava? Use nosso formulário de contato acima para esclarecer suas dúvidas.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:08006099350"
-                className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                📞 0800 609 9350
-              </a>
-              <a 
-                href="mailto:contato@telein.com.br"
-                className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-              >
-                ✉️ contato@telein.com.br
-              </a>
-            </div>
           </div>
         </div>
       </div>
