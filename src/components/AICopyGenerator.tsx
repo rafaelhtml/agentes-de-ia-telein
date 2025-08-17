@@ -54,47 +54,47 @@ const AICopyGenerator = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-feature rounded-2xl p-8 mb-12">
+            <div className="bg-gradient-to-br from-telein-blue to-blue-600 rounded-2xl p-8 mb-12 shadow-xl">
               <div className="flex items-center gap-3 mb-8">
-                <div className="bg-telein-blue text-white rounded-full p-3">
+                <div className="bg-white text-telein-blue rounded-full p-3 shadow-lg">
                   <Zap className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-telein-blue">Como Funciona?</h3>
-                  <p className="text-muted-foreground">Processo simples em 4 passos</p>
+                  <h3 className="text-2xl font-bold text-white">Como Funciona?</h3>
+                  <p className="text-blue-100">Processo simples em 4 passos</p>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="flex items-start gap-4">
-                  <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+                  <div className="bg-telein-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-lg">1</div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Informe seu Produto e Nicho</h4>
-                    <p className="text-sm text-muted-foreground">Descreva o que você vende e qual seu mercado alvo</p>
+                    <h4 className="font-bold text-white mb-2">Informe seu Produto e Nicho</h4>
+                    <p className="text-blue-100">Descreva o que você vende e qual seu mercado alvo</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+                  <div className="bg-telein-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-lg">2</div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">IA Gera Múltiplas Ideias</h4>
-                    <p className="text-sm text-muted-foreground">Sistema cria várias opções de copy personalizadas</p>
+                    <h4 className="font-bold text-white mb-2">IA Gera Múltiplas Ideias</h4>
+                    <p className="text-blue-100">Sistema cria várias opções de copy personalizadas</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+                  <div className="bg-telein-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-lg">3</div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Escolha sua Favorita</h4>
-                    <p className="text-sm text-muted-foreground">Selecione a abordagem que mais gostou</p>
+                    <h4 className="font-bold text-white mb-2">Escolha sua Favorita</h4>
+                    <p className="text-blue-100">Selecione a abordagem que mais gostou</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">4</div>
+                  <div className="bg-telein-orange text-white rounded-full w-12 h-12 flex items-center justify-center text-sm font-bold flex-shrink-0 shadow-lg">4</div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Converta em Áudio</h4>
-                    <p className="text-sm text-muted-foreground">Use IA para gerar áudio ou grave com sua própria voz</p>
+                    <h4 className="font-bold text-white mb-2">Converta em Áudio</h4>
+                    <p className="text-blue-100">Use IA para gerar áudio ou grave com sua própria voz</p>
                   </div>
                 </div>
               </div>
@@ -102,10 +102,10 @@ const AICopyGenerator = () => {
               {/* Features Grid */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {features.map((feature, index) => (
-                  <div key={index} className="bg-card/50 rounded-xl p-4 text-center">
-                    <feature.icon className="h-6 w-6 text-telein-blue mx-auto mb-2" />
-                    <h4 className="font-semibold text-sm text-foreground mb-1">{feature.title}</h4>
-                    <p className="text-xs text-muted-foreground">{feature.description}</p>
+                  <div key={index} className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center border border-white/30 shadow-lg">
+                    <feature.icon className="h-6 w-6 text-white mx-auto mb-2" />
+                    <h4 className="font-bold text-sm text-white mb-1">{feature.title}</h4>
+                    <p className="text-xs text-blue-100">{feature.description}</p>
                   </div>
                 ))}
               </div>
