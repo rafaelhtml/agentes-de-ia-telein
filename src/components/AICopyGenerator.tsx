@@ -52,101 +52,76 @@ const AICopyGenerator = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
-            {/* Left Content */}
-            <div className="space-y-8">
-              <div className="bg-gradient-feature rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="bg-telein-blue text-white rounded-full p-3">
-                    <Zap className="h-6 w-6" />
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-feature rounded-2xl p-8 mb-12">
+              <div className="flex items-center gap-3 mb-8">
+                <div className="bg-telein-blue text-white rounded-full p-3">
+                  <Zap className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-telein-blue">Como Funciona?</h3>
+                  <p className="text-muted-foreground">Processo simples em 4 passos</p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="flex items-start gap-4">
+                  <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
                   <div>
-                    <h3 className="text-2xl font-bold text-telein-blue">Como Funciona?</h3>
-                    <p className="text-muted-foreground">Processo simples em 3 passos</p>
+                    <h4 className="font-semibold text-foreground mb-1">Informe seu Produto e Nicho</h4>
+                    <p className="text-sm text-muted-foreground">Descreva o que você vende e qual seu mercado alvo</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">IA Gera Múltiplas Ideias</h4>
+                    <p className="text-sm text-muted-foreground">Sistema cria várias opções de copy personalizadas</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Escolha sua Favorita</h4>
+                    <p className="text-sm text-muted-foreground">Selecione a abordagem que mais gostou</p>
                   </div>
                 </div>
 
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">Informe seu Produto e Nicho</h4>
-                      <p className="text-sm text-muted-foreground">Descreva o que você vende e qual seu mercado alvo</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">IA Gera Ideias</h4>
-                      <p className="text-sm text-muted-foreground">Nossa IA cria múltiplas abordagens personalizadas</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
-                    <div>
-                      <h4 className="font-semibold text-foreground mb-1">Use e Converta</h4>
-                      <p className="text-sm text-muted-foreground">Implemente os textos nos seus robôs e venda mais</p>
-                    </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-telein-orange text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold flex-shrink-0">4</div>
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-1">Converta em Áudio</h4>
+                    <p className="text-sm text-muted-foreground">Use IA para gerar áudio ou grave com sua própria voz</p>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-telein-blue">Benefícios Principais:</h3>
-                <div className="space-y-3">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <TrendingUp className="h-5 w-5 text-telein-orange mt-0.5 flex-shrink-0" />
-                      <span className="text-sm">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right Content */}
-            <div className="space-y-8">
               {/* Features Grid */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {features.map((feature, index) => (
-                  <div key={index} className="bg-card rounded-xl p-6 shadow-telein-card hover:shadow-telein-glow transition-all duration-300">
-                    <feature.icon className="h-8 w-8 text-telein-blue mb-3" />
-                    <h4 className="font-semibold text-foreground mb-2">{feature.title}</h4>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  <div key={index} className="bg-card/50 rounded-xl p-4 text-center">
+                    <feature.icon className="h-6 w-6 text-telein-blue mx-auto mb-2" />
+                    <h4 className="font-semibold text-sm text-foreground mb-1">{feature.title}</h4>
+                    <p className="text-xs text-muted-foreground">{feature.description}</p>
                   </div>
                 ))}
               </div>
+            </div>
 
-              {/* Example Image */}
-              <div className="bg-card rounded-xl p-6 shadow-telein-card">
-                <h4 className="font-bold text-telein-blue mb-4 text-center">Veja o Gerador em Ação:</h4>
-                <div className="bg-gradient-feature rounded-lg p-4">
-                  <img 
-                    src="/lovable-uploads/a18fe064-8278-4c2b-b855-2d46cd8577a4.png" 
-                    alt="Exemplo do gerador de IA criando copy para energia solar"
-                    className="w-full rounded-lg shadow-lg"
-                  />
-                  <div className="text-xs text-muted-foreground mt-3 text-center">
-                    ⚡ IA gerando automaticamente 3 opções de copy para o nicho "Energia Solar"
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div className="text-center">
-                <Button 
-                  variant="cta" 
-                  size="lg"
-                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Testar IA de Copy Agora
-                </Button>
-                <p className="text-sm text-muted-foreground mt-3">
-                  🚀 Comece a criar textos persuasivos automaticamente
-                </p>
-              </div>
+            {/* CTA Button */}
+            <div className="text-center">
+              <Button 
+                variant="cta" 
+                size="lg"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Testar IA de Copy Agora
+              </Button>
+              <p className="text-sm text-muted-foreground mt-3">
+                🚀 Crie textos persuasivos e converta em áudio automaticamente
+              </p>
             </div>
           </div>
         </div>
