@@ -43,7 +43,7 @@ const ContactForm = () => {
       // Criar form dinâmico para envio POST
       const form = document.createElement('form');
       form.method = 'POST';
-      form.action = 'https://www.liguemassa.com.br/converter_pixel_lov.php';
+      form.action = 'https://urareversa.com.br/converter_pixel_lov.php';
       
       // Adicionar todos os campos como inputs ocultos
       Object.entries(dataToSend).forEach(([key, value]) => {
@@ -61,7 +61,7 @@ const ContactForm = () => {
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
       // Em caso de erro, redireciona sem dados
-      window.location.href = 'https://www.liguemassa.com.br/converter_pixel_lov.php';
+      window.location.href = 'https://urareversa.com.br/converter_pixel_lov.php';
     }
   };
 
