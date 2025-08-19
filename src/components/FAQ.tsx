@@ -18,7 +18,7 @@ const FAQ = () => {
     },
     {
       question: "Posso testar antes de contratar?",
-      answer: "Sim, oferecemos 7 dias de teste gratuito para que você experimente todas as funcionalidades da plataforma e comprove a eficácia do sistema antes de contratar um plano completo."
+      answer: "Sim, oferecemos um teste gratuito com 3 robôs por 5 horas, onde serão feitas 2000 discagens, para que o cliente possa validar o funcionamento da ferramenta e ver na prática como nossa solução funciona antes de contratar um plano completo."
     },
     {
       question: "Quantas chamadas posso fazer por dia?",
