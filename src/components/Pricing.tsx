@@ -136,36 +136,15 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* Custom Plans */}
-        <div className="bg-gradient-hero rounded-2xl p-8 text-center max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Star className="h-6 w-6 text-telein-orange" />
-            <h3 className="text-2xl font-bold text-telein-blue">
-              Precisa de algo diferente?
-            </h3>
-            <Star className="h-6 w-6 text-telein-orange" />
-          </div>
-          
-          <p className="text-lg text-muted-foreground mb-6">
-            Temos outros planos disponíveis e também podemos customizar de acordo com sua necessidade específica.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline_light" size="lg">
-              Ver Outros Planos
-            </Button>
-            <Button 
-              variant="cta" 
-              size="lg"
-              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Solicitar Plano Customizado
-            </Button>
-          </div>
-          
-          <p className="text-sm text-muted-foreground mt-4">
-            💡 Fale conosco e montamos o plano perfeito para seu volume de vendas
-          </p>
+        {/* Other Plans Button */}
+        <div className="text-center max-w-2xl mx-auto">
+          <Button 
+            variant="cta" 
+            size="xl"
+            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Clique para Ver Outros Planos
+          </Button>
         </div>
       </div>
     </section>
