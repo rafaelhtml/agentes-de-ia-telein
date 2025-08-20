@@ -1,4 +1,5 @@
 import { CreditCard, Home, Phone, Heart, Shield, Smartphone } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Segments = () => {
   const segments = [
@@ -73,10 +74,27 @@ const Segments = () => {
             <h3 className="text-2xl font-bold text-accent-foreground mb-4">
               🎯 Seu segmento não está na lista?
             </h3>
-            <p className="text-accent-foreground/80 text-lg">
+            <p className="text-accent-foreground/80 text-lg mb-6">
               Nossa URA Reversa funciona para qualquer negócio que possa fazer ofertas por telefone. 
               <span className="block mt-2 font-semibold">Fale conosco e vamos adaptar para seu mercado!</span>
             </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                variant="cta" 
+                size="lg"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                ✨ Ver Como Funciona no Meu Segmento
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                🎯 Personalizar para Meu Negócio
+              </Button>
+            </div>
           </div>
         </div>
       </div>

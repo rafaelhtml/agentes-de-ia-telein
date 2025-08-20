@@ -1,4 +1,5 @@
 import { AlertTriangle, Clock, TrendingDown, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Problem = () => {
   const problems = [
@@ -89,9 +90,28 @@ const Problem = () => {
                 <p className="text-xl font-bold mb-2">
                   🎯 Seja você quem encontra o cliente, não quem espera ser encontrado
                 </p>
-                <p className="text-white/90">
+                <p className="text-white/90 mb-6">
                   Enquanto seus concorrentes esperam, você estará conquistando novos negócios todos os dias
                 </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    variant="hero" 
+                    size="lg"
+                    onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="bg-white text-telein-blue hover:bg-white/90 font-bold"
+                  >
+                    🚀 Resolver Esses Problemas Agora
+                  </Button>
+                  <Button 
+                    variant="outline_light" 
+                    size="lg"
+                    onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="border-white text-white hover:bg-white hover:text-telein-blue"
+                  >
+                    📞 Falar com Especialista
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
