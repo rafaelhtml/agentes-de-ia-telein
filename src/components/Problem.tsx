@@ -99,7 +99,7 @@ const Problem = () => {
                     variant="hero" 
                     size="lg"
                     onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="bg-white text-telein-blue hover:bg-white/90 font-bold px-6 py-3 text-sm sm:text-base whitespace-nowrap min-w-fit"
+                    className="bg-white text-telein-blue hover:bg-white/90 font-bold w-full sm:w-auto px-6 py-3 text-sm sm:text-base"
                   >
                     🚀 Resolver Problemas
                   </Button>
@@ -107,7 +107,7 @@ const Problem = () => {
                     variant="outline_light" 
                     size="lg"
                     onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="border-white text-white hover:bg-white hover:text-telein-blue px-6 py-3 text-sm sm:text-base whitespace-nowrap min-w-fit"
+                    className="border-white text-white hover:bg-white hover:text-telein-blue w-full sm:w-auto px-6 py-3 text-sm sm:text-base"
                   >
                     📞 Falar com Especialista
                   </Button>
