@@ -1,0 +1,188 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+
+interface VSLPlayerProps {
+  src: string;
+  poster?: string;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", style }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const [showFakeProgress, setShowFakeProgress] = useState(true);
+  const [fakeProgress, setFakeProgress] = useState(15); // Simula que já passou 15% do vídeo
+  const [realProgress, setRealProgress] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  // Simula o progresso fake quando a página carrega
+  useEffect(() => {
+    if (showFakeProgress) {
+      const interval = setInterval(() => {
+        setFakeProgress(prev => {
+          if (prev >= 25) { // Para em 25% para criar urgência
+            return 25;
+          }
+          return prev + 0.1;
+        });
+      }, 100);
+      return () => clearInterval(interval);
+    }
+  }, [showFakeProgress]);
+
+  // Atualiza o progresso real do vídeo
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const updateProgress = () => {
+      const progress = (video.currentTime / video.duration) * 100;
+      setRealProgress(progress);
+      setCurrentTime(video.currentTime);
+    };
+
+    const updateDuration = () => {
+      setDuration(video.duration);
+    };
+
+    video.addEventListener('timeupdate', updateProgress);
+    video.addEventListener('loadedmetadata', updateDuration);
+    video.addEventListener('ended', () => setIsPlaying(false));
+
+    return () => {
+      video.removeEventListener('timeupdate', updateProgress);
+      video.removeEventListener('loadedmetadata', updateDuration);
+      video.removeEventListener('ended', () => setIsPlaying(false));
+    };
+  }, []);
+
+  const handlePlay = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (!isPlaying) {
+      // Primeira vez que clica play - inicia o vídeo real
+      setShowFakeProgress(false);
+      setIsMuted(false);
+      video.muted = false;
+      video.currentTime = 0; // Começa do início
+      await video.play();
+      setIsPlaying(true);
+    } else {
+      video.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
+  };
+
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
+  const currentProgress = showFakeProgress ? fakeProgress : realProgress;
+
+  return (
+    <div className={`relative bg-black rounded-xl overflow-hidden ${className}`} style={style}>
+      <video
+        ref={videoRef}
+        className="w-full h-full object-cover"
+        poster={poster}
+        muted={isMuted}
+        preload="metadata"
+      >
+        <source src={src} type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+
+      {/* Overlay de controles customizados */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent">
+        {/* Botão de play central */}
+        {!isPlaying && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Button
+              onClick={handlePlay}
+              size="lg"
+              className="bg-telein-orange hover:bg-telein-orange/90 text-white rounded-full w-16 h-16 p-0 shadow-lg"
+            >
+              <Play className="w-8 h-8 ml-1" />
+            </Button>
+          </div>
+        )}
+
+        {/* Controles na parte inferior */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+          <div className="flex items-center gap-3">
+            {/* Play/Pause */}
+            <Button
+              onClick={handlePlay}
+              size="sm"
+              variant="ghost"
+              className="text-white hover:bg-white/20 p-2"
+            >
+              {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+            </Button>
+
+            {/* Barra de progresso */}
+            <div className="flex-1 mx-2">
+              <div className="bg-white/30 h-1 rounded-full">
+                <div 
+                  className="bg-telein-orange h-full rounded-full transition-all duration-300"
+                  style={{ width: `${currentProgress}%` }}
+                />
+              </div>
+            </div>
+
+            {/* Volume */}
+            <Button
+              onClick={toggleMute}
+              size="sm"
+              variant="ghost"
+              className="text-white hover:bg-white/20 p-2"
+            >
+              {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+            </Button>
+
+            {/* Tempo */}
+            <div className="text-white text-xs font-medium min-w-[60px]">
+              {showFakeProgress ? "2:30 / 10:45" : `${formatTime(currentTime)} / ${formatTime(duration)}`}
+            </div>
+          </div>
+        </div>
+
+        {/* Indicador "AO VIVO" fake */}
+        {showFakeProgress && (
+          <div className="absolute top-4 left-4">
+            <div className="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              AO VIVO
+            </div>
+          </div>
+        )}
+
+        {/* Contador de visualizações fake */}
+        {showFakeProgress && (
+          <div className="absolute top-4 right-4">
+            <div className="bg-black/70 text-white px-3 py-1 rounded-full text-xs font-medium">
+              👁️ 1.247 assistindo
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default VSLPlayer;

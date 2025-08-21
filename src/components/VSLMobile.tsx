@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Phone, Play } from "lucide-react";
+import VSLPlayer from "@/components/VSLPlayer";
 
 const VSLMobile = () => {
   return (
@@ -22,16 +23,12 @@ const VSLMobile = () => {
         
         <div className="max-w-sm mx-auto">
           <div className="bg-card shadow-telein-card rounded-2xl p-6">
-            <div className="relative bg-black rounded-xl overflow-hidden" style={{ aspectRatio: '720/1280' }}>
-              <video
-                controls
-                className="w-full h-full object-cover"
-                poster="/placeholder.svg"
-              >
-                <source src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4" type="video/mp4" />
-                Seu navegador não suporta o elemento de vídeo.
-              </video>
-            </div>
+            <VSLPlayer
+              src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
+              poster="/placeholder.svg"
+              className="w-full"
+              style={{ aspectRatio: '720/1280' }}
+            />
             
             <div className="mt-6 space-y-4">
               <Button 
