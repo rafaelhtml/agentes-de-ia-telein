@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Phone, Users, Zap } from "lucide-react";
+import { Phone, Users, Zap, Play } from "lucide-react";
 import heroImage from "@/assets/hero-ura-reversa.jpg";
 import teleinLogo from "@/assets/telein-logo.png";
 
@@ -55,10 +56,10 @@ const Hero = () => {
               <Button 
                 variant="outline_light" 
                 size="xl"
-                onClick={() => document.getElementById('video-demo')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('vsl-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Zap className="mr-2" />
-                Ver Demonstração
+                <Play className="mr-2" />
+                Ver Vídeo Explicativo
               </Button>
             </div>
             
@@ -75,63 +76,39 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Comparison Section */}
-          <div className="lg:justify-self-end">
-            <div className="bg-card shadow-telein-card rounded-2xl p-8 space-y-6 animate-float">
-              <div className="text-center mb-6">
+          {/* VSL Section - Desktop Only */}
+          <div className="hidden lg:flex lg:justify-center">
+            <div className="bg-card shadow-telein-card rounded-2xl p-6 animate-float max-w-md">
+              <div className="text-center mb-4">
                 <h3 className="text-xl font-semibold mb-2">
-                  Humano vs Robô Telein
+                  Veja Como Funciona
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Comparativo de performance em 1 hora
+                  Explicação completa em vídeo
                 </p>
               </div>
               
-              {/* Comparison Table */}
-              <div className="space-y-4">
-                {/* Header */}
-                <div className="grid grid-cols-3 gap-4 pb-2 border-b border-border">
-                  <div className="text-xs font-medium text-muted-foreground"></div>
-                  <div className="text-xs font-medium text-center text-muted-foreground">👤 Humano</div>
-                  <div className="text-xs font-medium text-center text-telein-blue">🤖 Robô Telein</div>
-                </div>
-                
-                {/* Ligações */}
-                <div className="grid grid-cols-3 gap-4 items-center">
-                  <span className="text-sm">Ligações/hora</span>
-                  <span className="text-center text-sm">~20</span>
-                  <span className="text-center text-telein-blue font-semibold">150</span>
-                </div>
-                
-                {/* Atendidas */}
-                <div className="grid grid-cols-3 gap-4 items-center">
-                  <span className="text-sm">Atendidas</span>
-                  <span className="text-center text-sm">~4</span>
-                  <span className="text-center text-telein-blue font-semibold">40</span>
-                </div>
-                
-                {/* Leads qualificados */}
-                <div className="grid grid-cols-3 gap-4 items-center">
-                  <span className="text-sm">Leads qualificados</span>
-                  <span className="text-center text-sm">0-1</span>
-                  <span className="text-center text-telein-orange font-semibold">4-8</span>
-                </div>
-                
-                {/* Custo */}
-                <div className="grid grid-cols-3 gap-4 items-center pt-2 border-t border-border">
-                  <span className="text-sm font-medium">Custo mensal</span>
-                  <span className="text-center text-sm">R$ 3.000+</span>
-                  <span className="text-center text-telein-orange font-semibold">R$ 379,90</span>
-                </div>
+              <div className="relative bg-black rounded-xl overflow-hidden" style={{ aspectRatio: '720/1280' }}>
+                <video
+                  controls
+                  className="w-full h-full object-cover"
+                  poster="/placeholder.svg"
+                >
+                  <source src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4" type="video/mp4" />
+                  Seu navegador não suporta o elemento de vídeo.
+                </video>
               </div>
               
-              <div className="bg-gradient-feature rounded-lg p-4 text-center mt-6">
-                <p className="text-xs text-accent-foreground/90 font-medium">
-                  💡 Você pode ter vários robôs trabalhando em paralelo
-                </p>
-                <p className="text-xs text-accent-foreground/70 mt-1">
-                  Multiplique seus resultados sem aumentar custos proporcionalmente
-                </p>
+              <div className="mt-4 text-center">
+                <Button 
+                  variant="cta" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  <Phone className="mr-2 w-4 h-4" />
+                  Quero Testar Grátis
+                </Button>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
@@ -7,6 +8,8 @@ import AboutUs from "@/components/AboutUs";
 import Segments from "@/components/Segments";
 import AudioExamples from "@/components/AudioExamples";
 import Pricing from "@/components/Pricing";
+import VSLMobile from "@/components/VSLMobile";
+import Comparison from "@/components/Comparison";
 import Affiliate from "@/components/Affiliate";
 import Guarantee from "@/components/Guarantee";
 import ContactForm from "@/components/ContactForm";
@@ -25,6 +28,8 @@ const Index = () => {
       <AboutUs />
       <Segments />
       <Pricing />
+      <VSLMobile />
+      <Comparison />
       <Affiliate />
       <Guarantee />
       <CTA />
