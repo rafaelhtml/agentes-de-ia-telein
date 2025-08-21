@@ -34,32 +34,31 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
     }
   }, [showFakeProgress]);
 
-  // Atualiza o progresso real do vídeo
+  // Força autoplay silencioso no carregamento para "pré-exibir" o vídeo
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const updateProgress = () => {
-      const progress = (video.currentTime / video.duration) * 100;
-      setRealProgress(progress);
-      setCurrentTime(video.currentTime);
-    };
-
-    const updateDuration = () => {
-      setDuration(video.duration);
-    };
-
-    video.addEventListener('timeupdate', updateProgress);
-    video.addEventListener('loadedmetadata', updateDuration);
-    video.addEventListener('ended', () => setIsPlaying(false));
-
-    return () => {
-      video.removeEventListener('timeupdate', updateProgress);
-      video.removeEventListener('loadedmetadata', updateDuration);
-      video.removeEventListener('ended', () => setIsPlaying(false));
-    };
-  }, []);
-
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    if (showFakeProgress) {
+      const tryPlay = () => {
+        const p = v.play();
+        if (p && typeof p.then === 'function') {
+          p.catch(() => {/* ignore autoplay block */});
+        }
+      };
+      // Em alguns navegadores, play só funciona após metadata
+      if (v.readyState >= 2) {
+        tryPlay();
+      } else {
+        const onCanPlay = () => {
+          tryPlay();
+          v.removeEventListener('canplay', onCanPlay);
+        };
+        v.addEventListener('canplay', onCanPlay);
+      }
+    }
+  }, [showFakeProgress]);
+  // Atualiza o progresso real do vídeo
   const handlePlay = async () => {
     const video = videoRef.current;
     if (!video) return;
@@ -101,7 +100,10 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
         className="w-full h-full object-cover"
         poster={poster}
         muted={isMuted}
-        preload="metadata"
+        preload="auto"
+        autoPlay
+        playsInline
+        loop
       >
         <source src={src} type="video/mp4" />
         Seu navegador não suporta o elemento de vídeo.

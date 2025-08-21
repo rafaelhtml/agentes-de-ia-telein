@@ -20,6 +20,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Hero />
+      <VSLMobile />
       <Problem />
       <Solution />
       <AICopyGenerator />
@@ -28,7 +29,6 @@ const Index = () => {
       <AboutUs />
       <Segments />
       <Pricing />
-      <VSLMobile />
       <Comparison />
       <Affiliate />
       <Guarantee />

@@ -8,10 +8,6 @@ const VSLMobile = () => {
     <section id="vsl-section" className="lg:hidden py-20 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Play className="w-4 h-4" />
-            Vídeo Explicativo
-          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Veja como a <span className="text-telein-blue">URA Reversa</span> vai
             <span className="text-telein-orange block">revolucionar suas vendas</span>
@@ -23,14 +19,8 @@ const VSLMobile = () => {
         
         <div className="max-w-sm mx-auto">
           <div className="bg-card shadow-telein-card rounded-2xl p-6">
-            <VSLPlayer
-              src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
-              poster="/placeholder.svg"
-              className="w-full"
-              style={{ aspectRatio: '720/1280' }}
-            />
-            
-            <div className="mt-6 space-y-4">
+            {/* CTA primeiro */}
+            <div className="space-y-4">
               <Button 
                 variant="cta" 
                 size="lg" 
@@ -40,12 +30,21 @@ const VSLMobile = () => {
                 <Phone className="mr-2" />
                 Teste Grátis (2000 Ligações)
               </Button>
-              
               <div className="text-center">
                 <p className="text-sm text-muted-foreground">
                   ✅ Sem compromisso • ✅ Sem cartão de crédito
                 </p>
               </div>
+            </div>
+
+            {/* VSL após o CTA */}
+            <div className="mt-6">
+              <VSLPlayer
+                src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
+                poster="/placeholder.svg"
+                className="w-full"
+                style={{ aspectRatio: '720/1280' }}
+              />
             </div>
           </div>
         </div>

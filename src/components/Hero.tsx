@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Users, Zap, Play } from "lucide-react";
 import heroImage from "@/assets/hero-ura-reversa.jpg";
 import teleinLogo from "@/assets/telein-logo.png";
+import VSLPlayer from "@/components/VSLPlayer";
 
 const Hero = () => {
   return (
@@ -56,6 +57,7 @@ const Hero = () => {
               <Button 
                 variant="outline_light" 
                 size="xl"
+                className="hidden lg:inline-flex"
                 onClick={() => document.getElementById('vsl-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Play className="mr-2" />
@@ -89,14 +91,12 @@ const Hero = () => {
               </div>
               
               <div className="relative bg-black rounded-xl overflow-hidden" style={{ aspectRatio: '720/1280' }}>
-                <video
-                  controls
-                  className="w-full h-full object-cover"
+                <VSLPlayer 
+                  src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
                   poster="/placeholder.svg"
-                >
-                  <source src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4" type="video/mp4" />
-                  Seu navegador não suporta o elemento de vídeo.
-                </video>
+                  className="w-full"
+                  style={{ aspectRatio: '720/1280' }}
+                />
               </div>
               
               <div className="mt-4 text-center">
