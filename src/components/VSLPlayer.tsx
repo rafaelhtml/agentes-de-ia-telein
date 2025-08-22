@@ -15,6 +15,7 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
   const [isMuted, setIsMuted] = useState(true);
   const [showFakeProgress, setShowFakeProgress] = useState(true);
   const [fakeProgress, setFakeProgress] = useState(15); // Simula que já passou 15% do vídeo
+  const [viewerCount] = useState(() => Math.floor(Math.random() * 26) + 35); // Random entre 35-60
   const [realProgress, setRealProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -66,8 +67,8 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
     if (!isPlaying) {
       // Primeira vez que clica play - inicia o vídeo real
       setShowFakeProgress(false);
-      setIsMuted(false);
       video.muted = false;
+      setIsMuted(false);
       video.currentTime = 0; // Começa do início
       await video.play();
       setIsPlaying(true);
@@ -178,7 +179,7 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
         {showFakeProgress && (
           <div className="absolute top-4 right-4">
             <div className="bg-black/70 text-white px-3 py-1 rounded-full text-xs font-medium">
-              👁️ 1.247 assistindo
+              👁️ {viewerCount} assistindo
             </div>
           </div>
         )}

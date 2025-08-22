@@ -78,6 +78,27 @@ const Hero = () => {
             </div>
           </div>
           
+          {/* VSL Section - Mobile Only */}
+          <div className="lg:hidden mt-12">
+            <div className="bg-card shadow-telein-card rounded-2xl p-6 max-w-sm mx-auto">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-semibold mb-2">
+                  Veja Como Funciona
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  Explicação completa em vídeo
+                </p>
+              </div>
+              
+              <VSLPlayer
+                src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
+                poster="/placeholder.svg"
+                className="w-full"
+                style={{ aspectRatio: '720/1280' }}
+              />
+            </div>
+          </div>
+          
           {/* VSL Section - Desktop Only */}
           <div className="hidden lg:flex lg:justify-center">
             <div className="bg-card shadow-telein-card rounded-2xl p-6 animate-float max-w-md">

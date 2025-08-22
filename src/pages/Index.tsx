@@ -8,7 +8,6 @@ import AboutUs from "@/components/AboutUs";
 import Segments from "@/components/Segments";
 import AudioExamples from "@/components/AudioExamples";
 import Pricing from "@/components/Pricing";
-import VSLMobile from "@/components/VSLMobile";
 import Comparison from "@/components/Comparison";
 import Affiliate from "@/components/Affiliate";
 import Guarantee from "@/components/Guarantee";
@@ -20,7 +19,6 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Hero />
-      <VSLMobile />
       <Problem />
       <Solution />
       <AICopyGenerator />
