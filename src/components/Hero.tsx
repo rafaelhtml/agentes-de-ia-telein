@@ -92,7 +92,7 @@ const Hero = () => {
               
               <VSLPlayer
                 src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
-                poster="/placeholder.svg"
+                poster={teleinLogo}
                 className="w-full"
                 style={{ aspectRatio: '720/1280' }}
               />
@@ -114,7 +114,7 @@ const Hero = () => {
               <div className="relative bg-black rounded-xl overflow-hidden" style={{ aspectRatio: '720/1280' }}>
                 <VSLPlayer 
                   src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
-                  poster="/placeholder.svg"
+                  poster={teleinLogo}
                   className="w-full"
                   style={{ aspectRatio: '720/1280' }}
                 />

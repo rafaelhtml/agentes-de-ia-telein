@@ -67,11 +67,22 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
     if (!isPlaying) {
       // Primeira vez que clica play - inicia o vídeo real
       setShowFakeProgress(false);
-      video.muted = false;
-      setIsMuted(false);
-      video.currentTime = 0; // Começa do início
-      await video.play();
-      setIsPlaying(true);
+      try {
+        video.pause();
+        video.currentTime = 0; // Começa do início
+        video.defaultMuted = false;
+        video.muted = false;
+        video.volume = 1;
+        setIsMuted(false);
+        const p = video.play();
+        if (p && typeof p.then === 'function') {
+          await p;
+        }
+        setIsPlaying(true);
+      } catch (e) {
+        // fallback: se o navegador ainda bloquear áudio, mantemos o estado coerente
+        setIsPlaying(!video.paused);
+      }
     } else {
       video.pause();
       setIsPlaying(false);
@@ -105,6 +116,12 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
         autoPlay
         playsInline
         loop
+        onLoadedMetadata={() => {
+          const v = videoRef.current;
+          if (v) {
+            setDuration(v.duration);
+          }
+        }}
       >
         <source src={src} type="video/mp4" />
         Seu navegador não suporta o elemento de vídeo.
@@ -160,7 +177,9 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
 
             {/* Tempo */}
             <div className="text-white text-xs font-medium min-w-[60px]">
-              {showFakeProgress ? "2:30 / 10:45" : `${formatTime(currentTime)} / ${formatTime(duration)}`}
+              {showFakeProgress
+                ? `${formatTime((fakeProgress / 100) * 180)} / 3:00`
+                : `${formatTime(currentTime)} / ${formatTime(duration || 180)}`}
             </div>
           </div>
         </div>
