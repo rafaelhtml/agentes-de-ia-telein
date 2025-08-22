@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Users, Zap, Play } from "lucide-react";
 import heroImage from "@/assets/hero-ura-reversa.jpg";
 import teleinLogo from "@/assets/telein-logo.png";
+import teleinThumb from "@/assets/telein-thumb.png";
 import VSLPlayer from "@/components/VSLPlayer";
 
 const Hero = () => {
@@ -92,7 +93,7 @@ const Hero = () => {
               
               <VSLPlayer
                 src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
-                poster={teleinLogo}
+                poster={teleinThumb}
                 className="w-full"
                 style={{ aspectRatio: '720/1280' }}
               />
@@ -114,7 +115,7 @@ const Hero = () => {
               <div className="relative bg-black rounded-xl overflow-hidden" style={{ aspectRatio: '720/1280' }}>
                 <VSLPlayer 
                   src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
-                  poster={teleinLogo}
+                  poster={teleinThumb}
                   className="w-full"
                   style={{ aspectRatio: '720/1280' }}
                 />

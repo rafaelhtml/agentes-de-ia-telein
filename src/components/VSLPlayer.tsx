@@ -39,7 +39,9 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
+    v.defaultMuted = true;
     v.muted = true;
+    v.playsInline = true;
     if (showFakeProgress) {
       const tryPlay = () => {
         const p = v.play();
@@ -68,19 +70,31 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
       // Primeira vez que clica play - inicia o vídeo real
       setShowFakeProgress(false);
       try {
+        // Garantir gesto do usuário: pausar qualquer autoplay, preparar áudio
         video.pause();
         video.currentTime = 0; // Começa do início
+        // Remover atributos que podem manter o mudo em alguns navegadores (iOS/Safari)
         video.defaultMuted = false;
         video.muted = false;
+        video.removeAttribute('muted');
+        video.removeAttribute('defaultMuted');
         video.volume = 1;
+        video.playsInline = true;
         setIsMuted(false);
+        // Play com gesto deve liberar o áudio
         const p = video.play();
         if (p && typeof p.then === 'function') {
           await p;
         }
+        // Edge case: se ainda estiver mudo, faz um toggle rápido
+        if (video.muted || video.volume === 0) {
+          video.pause();
+          video.muted = false;
+          video.volume = 1;
+          await video.play();
+        }
         setIsPlaying(true);
       } catch (e) {
-        // fallback: se o navegador ainda bloquear áudio, mantemos o estado coerente
         setIsPlaying(!video.paused);
       }
     } else {
@@ -171,6 +185,7 @@ const VSLPlayer: React.FC<VSLPlayerProps> = ({ src, poster, className = "", styl
               size="sm"
               variant="ghost"
               className="text-white hover:bg-white/20 p-2"
+              aria-label={isMuted ? 'Ativar som' : 'Desativar som'}
             >
               {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
             </Button>
