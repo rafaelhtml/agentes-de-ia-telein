@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
+import GoogleCalendarIntegration from "@/components/GoogleCalendarIntegration";
 import SocialProof from "@/components/SocialProof";
 import Testimonials from "@/components/Testimonials";
 import AboutUs from "@/components/AboutUs";
@@ -18,6 +19,7 @@ const Index = () => {
       <SocialProof />
       <Problem />
       <Solution />
+      <GoogleCalendarIntegration />
       <Comparison />
       <ChatTelein />
       <Testimonials />
