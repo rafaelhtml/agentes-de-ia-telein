@@ -1,6 +1,7 @@
 import { Calendar, Clock, CheckCircle, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { buildSignupUrl } from "@/lib/url-utils";
+import whatsappDemo from "@/assets/whatsapp-scheduling-demo.png";
 
 const GoogleCalendarIntegration = () => {
   const features = [
@@ -55,27 +56,41 @@ const GoogleCalendarIntegration = () => {
             </p>
           </div>
 
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div 
-                  key={index}
-                  className="bg-card border border-border rounded-xl p-6 hover:border-telein-blue/50 transition-colors"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="bg-telein-blue/10 p-3 rounded-lg">
-                      <Icon className="w-6 h-6 text-telein-blue" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                      <p className="text-muted-foreground">{feature.description}</p>
+          {/* Demo Image + Features */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-12 items-center">
+            {/* WhatsApp Demo */}
+            <div className="order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
+                <img 
+                  src={whatsappDemo} 
+                  alt="Demonstração do agente de IA agendando automaticamente via WhatsApp integrado ao Google Calendar"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+
+            {/* Features */}
+            <div className="order-1 lg:order-2 space-y-6">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div 
+                    key={index}
+                    className="bg-card border border-border rounded-xl p-6 hover:border-telein-blue/50 transition-colors"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="bg-telein-blue/10 p-3 rounded-lg">
+                        <Icon className="w-6 h-6 text-telein-blue" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
+                        <p className="text-muted-foreground">{feature.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
           {/* Use Cases */}
