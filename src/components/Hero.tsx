@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Phone, Users, Zap, Play } from "lucide-react";
 import heroImage from "@/assets/hero-ura-reversa.jpg";
 import teleinLogo from "@/assets/telein-logo.png";
@@ -35,11 +36,20 @@ const Hero = () => {
                 <span className="text-telein-orange block">Deixe a IA atender por você.</span>
               </h1>
               
+              <div className="flex flex-wrap gap-3 mb-4">
+                <Badge className="bg-telein-blue/10 text-telein-blue border-telein-blue/20 px-4 py-2 text-sm font-medium">
+                  Sem programar
+                </Badge>
+                <Badge className="bg-telein-orange/10 text-telein-orange border-telein-orange/20 px-4 py-2 text-sm font-medium">
+                  Teste grátis
+                </Badge>
+              </div>
+              
               <p className="text-xl text-muted-foreground max-w-lg">
-                Um agente de IA responde em segundos, 24/7, qualifica e só passa o que importa pro humano — sem programar e com teste grátis.
+                Um agente de IA responde em segundos, 24/7, qualifica e só passa o que importa pro humano.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
-                *Atendimento humanizado com IA em tempo real
+                *Simule a conversa antes de conectar ao WhatsApp.
               </p>
             </div>
             
