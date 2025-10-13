@@ -1,49 +1,50 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, MessageSquare, Target, Zap } from "lucide-react";
 import whatsappImage from "@/assets/whatsapp-integration.jpg";
+import { buildSignupUrl } from "@/lib/url-utils";
 
 const Solution = () => {
   const benefits = [
-    "Liga automaticamente para toda sua base de contatos",
-    "Bina Inteligente: utiliza números do mesmo DDD do destino para facilitar atendimento",
-    "Áudio com IA ou gravação com sua própria voz",
-    "Assistente IA cria 3 opções de copy automaticamente",
-    "Filtra e identifica apenas os contatos interessados",
-    "Gera lista qualificada automaticamente",
-    "Automatiza mensagens via WhatsApp (API oficial/não oficial)",
-    "Envia SMS automatizado para leads interessados",
-    "Integra com CRMs via webhook para informar outros sistemas",
-    "Funciona seg-sex 9h às 19h e sáb 9h às 14h",
-    "Planos diários, semanais e mensais - únicos no mercado",
-    "Sem contrato de fidelidade - cancele quando quiser",
-    "Integração com outros CRMs via webhook",
-    "Suporte no horário comercial por email, WhatsApp e telefone"
+    "✨ Configure em minutos sem programar",
+    "💬 Atende em tempo real 24/7 no WhatsApp",
+    "🧠 Respostas humanizadas com IA avançada",
+    "📅 Realiza agendamentos automaticamente",
+    "❓ Responde dúvidas frequentes instantaneamente",
+    "🛍️ Recomenda produtos baseado no perfil do cliente",
+    "👤 Transfere para humano apenas quando necessário",
+    "📊 Qualifica leads automaticamente",
+    "🔗 Integra com CRMs e sistemas via webhook",
+    "💰 R$ 79,90/mês por WhatsApp conectado",
+    "💳 Pague apenas pelos créditos que usar",
+    "🚀 Teste grátis - Crie seu agente agora",
+    "🎯 Sem fidelidade - Cancele quando quiser",
+    "🛠️ Suporte especializado sempre disponível"
   ];
 
   const process = [
     {
       step: "1",
       icon: Phone,
-      title: "Robô faz as ligações",
-      description: "Sistema automatizado liga para sua base de leads"
+      title: "Configure em minutos",
+      description: "Crie seu agente de IA gratuitamente em poucos cliques"
     },
     {
       step: "2", 
       icon: Target,
-      title: "Filtra interessados",
-      description: "Identifica e separa apenas contatos que demonstraram interesse real"
+      title: "IA aprende seu negócio",
+      description: "Adicione informações sobre produtos, serviços e processos"
     },
     {
       step: "3",
       icon: MessageSquare,
-      title: "Gera lista e automatiza contato",
-      description: "Cria lista de interessados e oferece automação via WhatsApp, SMS ou webhook"
+      title: "Conecte ao WhatsApp",
+      description: "Integração simples com seu número comercial"
     },
     {
       step: "4",
       icon: Zap,
-      title: "Sua equipe fecha",
-      description: "Vendedores recebem apenas leads quentes e prontos"
+      title: "Atenda automaticamente",
+      description: "IA responde, qualifica e agenda - 24 horas por dia"
     }
   ];
 
@@ -53,12 +54,13 @@ const Solution = () => {
         {/* Main Solution */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            O robô de vendas que sua empresa 
-            <span className="text-telein-blue block">estava esperando</span>
+            O agente de IA que responde seus clientes 
+            <span className="text-telein-blue block">como se fosse humano</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nosso sistema liga para sua base de contatos, filtra quem demonstrou interesse real, gera uma lista qualificada e oferece automação de contato via WhatsApp, SMS ou integração com seu CRM via webhook.
-            <span className="block text-sm mt-2 opacity-75">*Sistema URA Reversa Telein</span>
+            Em poucos minutos você cria um agente de IA personalizado que atende seus clientes no WhatsApp, 
+            responde dúvidas, agenda serviços, recomenda produtos e qualifica leads automaticamente.
+            <span className="block text-sm mt-2 opacity-75">*Teste grátis - Configure agora mesmo sem custo</span>
           </p>
         </div>
         
@@ -66,7 +68,7 @@ const Solution = () => {
           {/* Benefits List */}
           <div className="space-y-8">
             <h3 className="text-2xl font-bold text-telein-orange mb-6">
-              Benefícios
+              Por que escolher nosso Agente de IA?
             </h3>
             
             <div className="space-y-4">
@@ -82,10 +84,10 @@ const Solution = () => {
               variant="cta" 
               size="xl" 
               className="w-full sm:w-auto"
-              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.location.href = buildSignupUrl()}
             >
               <Phone className="mr-2" />
-              Quero Começar Agora
+              Criar Meu Agente Grátis
             </Button>
           </div>
           
@@ -99,10 +101,10 @@ const Solution = () => {
               />
               <div className="mt-6 text-center">
                 <h4 className="text-lg font-semibold text-telein-blue mb-2">
-                  Integre facilmente com seu WhatsApp
+                  Configure em minutos
                 </h4>
                 <p className="text-muted-foreground">
-                  É tão fácil como conectar no Whatsapp Web
+                  Tão simples quanto conectar no WhatsApp Web
                 </p>
               </div>
             </div>
@@ -112,7 +114,7 @@ const Solution = () => {
         {/* Process Steps */}
         <div className="bg-card rounded-2xl p-8 shadow-telein-card">
           <h3 className="text-2xl font-bold text-center mb-12">
-            Como sua empresa vai <span className="text-telein-blue">vender mais</span> em 4 passos:
+            Como começar a <span className="text-telein-blue">atender com IA</span> em 4 passos:
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

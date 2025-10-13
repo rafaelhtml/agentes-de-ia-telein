@@ -5,6 +5,7 @@ import heroImage from "@/assets/hero-ura-reversa.jpg";
 import teleinLogo from "@/assets/telein-logo.png";
 import teleinThumb from "@/assets/telein-thumb.png";
 import VSLPlayer from "@/components/VSLPlayer";
+import { buildSignupUrl } from "@/lib/url-utils";
 
 const Hero = () => {
   return (
@@ -48,10 +49,10 @@ const Hero = () => {
                 variant="cta" 
                 size="xl" 
                 className="animate-pulse-glow"
-                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.location.href = buildSignupUrl()}
               >
                 <Phone className="mr-2" />
-                Teste Grátis Agora
+                Criar Agente de IA Grátis
               </Button>
               <Button 
                 variant="outline_light" 
@@ -90,7 +91,7 @@ const Hero = () => {
               </div>
               
               <VSLPlayer
-                src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
+                src="https://interface.telein.com.br/tutorial.mp4"
                 poster={teleinThumb}
                 className="w-full"
                 style={{ aspectRatio: '720/1280' }}
@@ -112,7 +113,7 @@ const Hero = () => {
               
               <div className="relative bg-black rounded-xl overflow-hidden" style={{ aspectRatio: '720/1280' }}>
                 <VSLPlayer 
-                  src="https://interface.telein.com.br/downloads/vsl-ura-reversa.mp4"
+                  src="https://interface.telein.com.br/tutorial.mp4"
                   poster={teleinThumb}
                   className="w-full"
                   style={{ aspectRatio: '720/1280' }}
@@ -124,10 +125,10 @@ const Hero = () => {
                   variant="cta" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => window.location.href = buildSignupUrl()}
                 >
                   <Phone className="mr-2 w-4 h-4" />
-                  Quero Testar Grátis
+                  Criar Agente de IA Grátis
                 </Button>
               </div>
             </div>

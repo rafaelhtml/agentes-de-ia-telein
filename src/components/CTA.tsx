@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, CheckCircle } from "lucide-react";
+import { buildSignupUrl } from "@/lib/url-utils";
 
 const CTA = () => {
   const guarantees = [
-    "Teste gratuito: 5h com 3 robôs (~2000 ligações)",
-    "Configuração com vídeos e suporte",
-    "Planos diários, semanais e mensais",
-    "Sem contratos de fidelidade"
+    "Crie seu agente grátis em minutos",
+    "Configure sem programar",
+    "R$ 79,90/mês + créditos de consumo",
+    "Sem fidelidade - Cancele quando quiser"
   ];
 
   return (
@@ -21,17 +22,17 @@ const CTA = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Urgency Header */}
           <div className="bg-telein-orange text-white px-6 py-2 rounded-full inline-block mb-8 font-semibold animate-pulse">
-            🚀 ACELERE SUAS VENDAS - Comece hoje mesmo sem fidelidade
+            🤖 COMECE GRÁTIS - Configure seu agente de IA agora
           </div>
           
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Tenha seu próprio
-            <span className="text-telein-blue block">robô de vendas hoje</span>
+            Crie seu agente de IA
+            <span className="text-telein-blue block">em poucos minutos</span>
           </h2>
           
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Único no mercado com planos flexíveis (diários, semanais, mensais) e sem fidelidade. 
-            Só precisa da lista de contatos - o resto fazemos por você!
+            Configure gratuitamente, adicione informações do seu negócio e teste conversando com seu agente. 
+            Só pague quando conectar ao WhatsApp para atender clientes reais!
           </p>
           
           {/* Guarantees */}
@@ -50,41 +51,31 @@ const CTA = () => {
               variant="cta" 
               size="xl" 
               className="text-xl py-6 px-12 animate-pulse-glow"
-              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.location.href = buildSignupUrl()}
             >
               <Phone className="mr-3 h-6 w-6" />
-              TESTE GRÁTIS (2000 LIGAÇÕES)
-            </Button>
-            
-            <Button 
-              variant="outline_light" 
-              size="xl"
-              className="text-xl py-6 px-12"
-              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <MessageSquare className="mr-3 h-6 w-6" />
-              Falar com Especialista
+              CRIAR AGENTE GRÁTIS
             </Button>
           </div>
           
           {/* Value Proposition */}
           <div className="bg-card rounded-2xl p-8 shadow-telein-card max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-telein-orange mb-4">
-              Você não precisa aumentar sua equipe:
+              Por que criar seu agente agora:
             </h3>
             
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold text-telein-blue mb-2">Otimize</div>
-                <p className="text-muted-foreground">Sua equipe atual sem contratar</p>
+                <div className="text-3xl font-bold text-telein-blue mb-2">Rápido</div>
+                <p className="text-muted-foreground">Configure em poucos minutos</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-telein-orange mb-2">Leads</div>
-                <p className="text-muted-foreground">Mais qualificados para seu time</p>
+                <div className="text-3xl font-bold text-telein-orange mb-2">Grátis</div>
+                <p className="text-muted-foreground">Teste sem compromisso</p>
               </div>
               <div>
-                <div className="text-3xl font-bold text-telein-blue mb-2">Resultados</div>
-                <p className="text-muted-foreground">Melhores com os mesmos vendedores</p>
+                <div className="text-3xl font-bold text-telein-blue mb-2">Eficaz</div>
+                <p className="text-muted-foreground">Resultados desde o primeiro dia</p>
               </div>
             </div>
           </div>
@@ -92,10 +83,10 @@ const CTA = () => {
           {/* Final Urgency */}
           <div className="mt-12 text-center">
             <p className="text-lg text-muted-foreground mb-4">
-              ⏰ Seus concorrentes não vão esperar você decidir
+              ⏰ Cada minuto sem IA é uma oportunidade perdida
             </p>
             <p className="text-telein-orange font-semibold">
-              Comece agora e saia na frente!
+              Configure agora e comece a atender melhor hoje mesmo!
             </p>
           </div>
         </div>

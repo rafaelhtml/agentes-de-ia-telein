@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Phone, Users, Zap } from "lucide-react";
+import { buildSignupUrl } from "@/lib/url-utils";
 
 const Comparison = () => {
   return (
@@ -74,10 +75,10 @@ const Comparison = () => {
               <Button 
                 variant="cta" 
                 size="xl"
-                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.location.href = buildSignupUrl()}
               >
                 <Phone className="mr-2" />
-                Começar Agora
+                Criar Agente Grátis
               </Button>
             </div>
           </div>

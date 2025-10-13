@@ -1,51 +1,54 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Phone, Star } from "lucide-react";
+import { buildSignupUrl } from "@/lib/url-utils";
 
 const Pricing = () => {
   const plans = [
     {
-      robots: "1 Robô",
-      price: "379",
-      period: "Mensal",
-      discagens: "1500",
-      users: "3",
-      popular: true
+      name: "Starter",
+      whatsappAccounts: "1",
+      price: "79",
+      credits: "200",
+      popular: false,
+      description: "Ideal para testar"
     },
     {
-      robots: "3 Robôs", 
-      price: "398",
-      period: "Semanal",
-      discagens: "4500",
-      users: "6",
-      popular: false
+      name: "Growth", 
+      whatsappAccounts: "2",
+      price: "149",
+      credits: "500",
+      popular: true,
+      description: "Para pequenas empresas"
     },
     {
-      robots: "3 Robôs",
-      price: "958", 
-      period: "Mensal",
-      discagens: "4500",
-      users: "8",
-      popular: true
+      name: "Pro",
+      whatsappAccounts: "5",
+      price: "349", 
+      credits: "1500",
+      popular: true,
+      description: "Para empresas em crescimento"
     },
     {
-      robots: "5 Robôs",
-      price: "143",
-      period: "Diário", 
-      discagens: "7500",
-      users: "6",
-      popular: false
+      name: "Enterprise",
+      whatsappAccounts: "10+",
+      price: "Custom",
+      credits: "Ilimitados",
+      popular: false,
+      description: "Solução personalizada"
     }
   ];
 
   const features = [
-    "Telefonia inclusa",
-    "Bina números de celular", 
-    "Bina inteligente (mesmo DDD)",
-    "Interface Web",
-    "Áudios e Mailings Ilimitados",
-    "Reconhecimento de Voz com IA",
-    "Fala nome do cliente",
-    "Implantação imediata"
+    "Atendimento 24/7 no WhatsApp",
+    "Respostas humanizadas com IA", 
+    "Agendamento automático",
+    "Responde dúvidas frequentes",
+    "Recomendação de produtos",
+    "Qualificação de leads",
+    "Transferência inteligente para humano",
+    "Integração com CRMs via webhook",
+    "Dashboard com métricas",
+    "Suporte técnico incluído"
   ];
 
   return (
@@ -53,14 +56,16 @@ const Pricing = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Escolha o plano ideal para 
-            <span className="text-telein-blue block">sua empresa</span>
+            Preços transparentes 
+            <span className="text-telein-blue block">sem surpresas</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Planos flexíveis sem fidelidade. <strong className="text-telein-blue">Únicos no mercado</strong> com opções 
-            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm font-bold mx-1">DIÁRIAS</span>
-            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-sm font-bold mx-1">SEMANAIS</span> e 
-            <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-sm font-bold mx-1">MENSAIS</span>
+            <span className="text-telein-orange font-bold">R$ 79,90/mês</span> por conta de WhatsApp conectada + 
+            <span className="text-telein-blue font-bold"> créditos de consumo</span>. 
+            Cada resposta gerada consome créditos de acordo com o modelo de IA utilizado.
+            <span className="block mt-2 text-sm">
+              🎁 <strong>Crie seu agente grátis</strong> e teste sem compromisso - Sem cartão de crédito!
+            </span>
           </p>
         </div>
 
@@ -80,70 +85,73 @@ const Pricing = () => {
 
               {/* Header */}
               <div className="bg-telein-blue text-white rounded-lg p-4 text-center mb-6">
-                <h3 className="text-lg font-bold">{plan.robots}</h3>
-                <p className="text-sm opacity-90">Em média {plan.discagens} Discagens/{plan.period === 'Diário' ? 'Dia' : plan.period === 'Semanal' ? 'Semana' : 'Mês'}</p>
+                <h3 className="text-lg font-bold">{plan.name}</h3>
+                <p className="text-sm opacity-90">{plan.description}</p>
               </div>
 
               {/* Price */}
               <div className="text-center mb-6">
-                <div className="flex items-baseline justify-center">
-                  <span className="text-telein-orange text-sm">R$</span>
-                  <span className="text-telein-orange text-4xl font-bold">{plan.price}</span>
-                  <span className="text-telein-orange text-sm">,90</span>
-                </div>
-                <div className={`inline-block px-4 py-2 rounded-full text-sm font-bold mt-2 ${
-                  plan.period === 'Diário' ? 'bg-green-100 text-green-800' :
-                  plan.period === 'Semanal' ? 'bg-blue-100 text-blue-800' :
-                  'bg-purple-100 text-purple-800'
-                }`}>
-                  {plan.period === 'Diário' && '💚 DIÁRIO'}
-                  {plan.period === 'Semanal' && '💙 SEMANAL'}
-                  {plan.period === 'Mensal' && '💜 MENSAL'}
-                </div>
+                {plan.price !== "Custom" ? (
+                  <>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-telein-orange text-sm">R$</span>
+                      <span className="text-telein-orange text-4xl font-bold">{plan.price}</span>
+                      <span className="text-telein-orange text-sm">,90</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">por mês</p>
+                  </>
+                ) : (
+                  <div className="text-telein-orange text-3xl font-bold">Sob Consulta</div>
+                )}
               </div>
 
-              {/* Features */}
+              {/* Plan Details */}
               <div className="space-y-3 mb-6">
-                {features.map((feature, featureIndex) => (
+                <div className="bg-gradient-feature rounded-lg p-3">
+                  <p className="text-sm font-semibold text-accent-foreground">
+                    📱 {plan.whatsappAccounts} Conta{plan.whatsappAccounts !== "1" ? "s" : ""} WhatsApp
+                  </p>
+                  <p className="text-xs text-accent-foreground/80 mt-1">
+                    💳 {plan.credits} créditos inclusos
+                  </p>
+                </div>
+                
+                {features.slice(0, 6).map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-telein-blue flex-shrink-0" />
                     <span className="text-sm">{feature}</span>
                   </div>
                 ))}
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-telein-blue flex-shrink-0" />
-                  <span className="text-sm">{plan.users} Usuários de Acesso</span>
-                </div>
-              </div>
-
-              {/* Discagens Info */}
-              <div className="flex items-center gap-2 mb-6 p-3 bg-gradient-feature rounded-lg">
-                <Phone className="h-4 w-4 text-accent-foreground" />
-                <span className="text-sm text-accent-foreground font-medium">
-                  Em média {plan.discagens} Discagens/{plan.period === 'Diário' ? 'Dia' : plan.period === 'Semanal' ? 'Semana' : 'Mês'}
-                </span>
               </div>
 
               {/* CTA Button */}
               <Button 
                 variant={plan.popular ? "cta" : "outline"} 
                 className="w-full"
-                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.location.href = buildSignupUrl()}
               >
-                CONTRATAR
+                {plan.price === "Custom" ? "FALAR COM VENDAS" : "COMEÇAR GRÁTIS"}
               </Button>
             </div>
           ))}
         </div>
 
-        {/* Other Plans Button */}
-        <div className="text-center max-w-2xl mx-auto">
+        {/* Free Trial CTA */}
+        <div className="text-center max-w-2xl mx-auto bg-gradient-to-r from-telein-orange/10 to-telein-blue/10 rounded-2xl p-8">
+          <h3 className="text-2xl font-bold mb-4">
+            🎁 Crie seu agente de IA <span className="text-telein-orange">gratuitamente</span>
+          </h3>
+          <p className="text-muted-foreground mb-6">
+            Configure em poucos minutos e converse com seu agente sem custo algum. 
+            Só pague quando decidir conectar ao WhatsApp e começar a atender clientes.
+          </p>
           <Button 
             variant="cta" 
             size="xl"
-            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => window.location.href = buildSignupUrl()}
           >
-            Clique para Ver Outros Planos
+            <Phone className="mr-2" />
+            Criar Agente Grátis Agora
           </Button>
         </div>
       </div>
