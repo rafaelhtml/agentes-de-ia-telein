@@ -1,56 +1,57 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { HelpCircle, MessageCircle, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { HelpCircle, MessageCircle, CheckCircle, Phone } from "lucide-react";
 
 const FAQ = () => {
   const faqItems = [
     {
-      question: "O que é a URA Reversa?",
-      answer: "A URA Reversa da Telein é uma solução de robô de ligações telefônicas que automatiza o contato com listas de clientes ou leads, levando uma oferta, aviso de evento ou cobrança para uma grande audiência de forma eficiente e rápida. Com essa tecnologia, é possível alcançar uma lista de contatos sem o risco de bloqueio ou banimento de números."
+      question: "O que é um Agente de IA?",
+      answer: "É um assistente virtual inteligente que atende seus clientes no WhatsApp 24/7 de forma humanizada. Ele responde dúvidas, agenda serviços, recomenda produtos e qualifica leads automaticamente, transferindo para humanos apenas quando necessário."
     },
     {
-      question: "Como funciona a URA Reversa?",
-      answer: "Para usar a URA Reversa: 1) Defina o áudio - Grave ou escreva o texto da mensagem que o cliente ouvirá ao atender. 2) Suba a lista de contatos - Carregue uma lista de clientes em formato CSV. 3) Inicie a campanha - A URA Reversa começa a discar automaticamente. 4) Acompanhe os resultados - Veja quais clientes interagiram, gerando leads qualificados para retorno via WhatsApp."
+      question: "Como funciona o Agente de IA?",
+      answer: "Em poucos minutos você cria seu agente, adiciona informações sobre seu negócio, produtos e serviços. O agente aprende com essas informações e passa a atender automaticamente via WhatsApp, respondendo perguntas, agendando e qualificando leads em tempo real."
     },
     {
-      question: "Quanto custa a URA Reversa?",
-      answer: "Oferecemos diferentes planos para atender suas necessidades, desde empresas pequenas até grandes corporações. Todos os planos incluem telefonia sem custo adicional por ligação. Entre em contato conosco para conhecer o plano ideal para seu volume de contatos e orçamento."
+      question: "Quanto custa?",
+      answer: "R$ 79,90/mês por número de WhatsApp conectado (API oficial ou não oficial) + créditos de consumo. Os créditos custam a partir de R$ 40,00 por 1.000 créditos. O custo final varia conforme o volume de atendimentos do seu negócio."
     },
     {
-      question: "Posso testar antes de contratar?",
-      answer: "Sim, oferecemos um teste gratuito com 3 robôs por 5 horas, onde serão feitas 2000 discagens, para que o cliente possa validar o funcionamento da ferramenta e ver na prática como nossa solução funciona antes de contratar um plano completo."
+      question: "Posso testar gratuitamente?",
+      answer: "Sim! Você pode criar e configurar seu agente de IA gratuitamente, adicionar informações do seu negócio e conversar com ele sem custo algum. Só paga quando decidir conectar ao WhatsApp para atender clientes reais."
     },
     {
-      question: "Quantas chamadas posso fazer por dia?",
-      answer: "A capacidade varia conforme o plano: 1 robô realiza até 1.500 chamadas/dia, 3 robôs alcançam até 4.500 chamadas/dia, 20 robôs realizam aproximadamente 30.000 chamadas/dia. Os números podem variar conforme a taxa de atendimento da sua lista."
+      question: "Como funciona o consumo de créditos?",
+      answer: "Cada resposta gerada pelo agente consome créditos. O consumo varia de acordo com o modelo de IA utilizado e o tamanho da resposta. Quanto mais atendimentos, mais créditos são necessários. Você recarrega quando precisar, sem mensalidades fixas além da conexão do WhatsApp."
     },
     {
-      question: "A URA Reversa integra com WhatsApp?",
-      answer: "Sim! Após qualificar um lead, o sistema pode enviar automaticamente uma mensagem via WhatsApp ou SMS, direcionando o cliente para continuar o atendimento, aumentando suas chances de conversão."
+      question: "Preciso saber programar?",
+      answer: "Não! A plataforma é 100% no-code. Você configura tudo através de uma interface simples e intuitiva, sem necessidade de conhecimento técnico ou programação. Em poucos minutos seu agente está pronto para atender."
     },
     {
-      question: "Como personalizar o áudio das campanhas?",
-      answer: "Você pode criar áudios personalizados diretamente na plataforma, transformando texto em áudio ou fazendo upload de gravações próprias. É possível inclusive personalizar com o nome do cliente para um atendimento mais humanizado."
+      question: "O agente atende 24 horas por dia?",
+      answer: "Sim! O agente de IA funciona 24/7, respondendo seus clientes a qualquer hora do dia ou da noite, inclusive finais de semana e feriados. Seus clientes nunca ficam sem resposta."
     },
     {
-      question: "Quais segmentos podem usar?",
-      answer: "Empresas de todos os segmentos se beneficiam: telecomunicações, financeiras, eventos, varejo, cobrança, imobiliário, seguros, consórcios e muito mais. Qualquer negócio que precise alcançar grandes listas de contatos."
+      question: "Posso integrar com meu CRM?",
+      answer: "Sim! O agente se integra com diversos sistemas via webhook, permitindo enviar informações de leads qualificados, agendamentos e interações diretamente para seu CRM ou sistema de gestão."
     },
     {
-      question: "Qual o horário de funcionamento?",
-      answer: "Os planos padrão operam das 9h às 19h (segunda a sexta) e 9h às 14h (sábados). Para campanhas fora desse horário, oferecemos planos customizados."
+      question: "E se o agente não souber responder algo?",
+      answer: "O agente possui transferência inteligente para atendimento humano. Se ele não souber responder ou o cliente solicitar falar com uma pessoa, a conversa é transferida automaticamente para sua equipe, garantindo que nenhum cliente fique sem atendimento."
     },
     {
-      question: "Como acompanho os resultados?",
-      answer: "Nossa plataforma oferece painel em tempo real com número de chamadas atendidas, taxas de conversão, estatísticas de interação e relatórios detalhados para download e análise completa da campanha."
+      question: "Quais tipos de negócio podem usar?",
+      answer: "Qualquer negócio que atende clientes via WhatsApp: clínicas, consultórios, lojas, prestadores de serviço, imobiliárias, academias, salões de beleza, assistências técnicas, entre outros. Se você atende por WhatsApp, o agente de IA pode ajudar!"
     },
     {
-      question: "Há garantia de satisfação?",
-      answer: "Sim! Oferecemos 7 dias de garantia. Se não ficar satisfeito, processamos seu reembolso de forma justa e transparente, descontando apenas os custos de telefonia dos dias utilizados."
+      question: "Como cancelo se não gostar?",
+      answer: "Sem fidelidade! Você pode cancelar a qualquer momento sem multas ou taxas. Se não estiver satisfeito, basta cancelar a assinatura mensal do número conectado. Simples e transparente."
     },
     {
-      question: "Como funciona o programa Indique e Ganhe?",
-      answer: "Clientes da URA Reversa ganham 5% de todas as recargas realizadas por seus indicados durante 12 meses. O indicado ainda recebe R$50 de desconto na primeira recarga. O link de indicação fica disponível na sua área de cliente."
+      question: "Tenho suporte técnico?",
+      answer: "Sim! Oferecemos suporte técnico completo para ajudar na configuração, tirar dúvidas e resolver qualquer problema. Nossa equipe está sempre disponível para garantir que seu agente funcione perfeitamente."
     }
   ];
 
@@ -72,7 +73,7 @@ const FAQ = () => {
               Tire suas <span className="text-telein-blue">Dúvidas</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Encontre respostas para as principais dúvidas sobre nossa solução de URA Reversa
+              Encontre respostas para as principais dúvidas sobre Agentes de IA
             </p>
           </div>
 
@@ -110,10 +111,17 @@ const FAQ = () => {
           <div className="text-center mt-12">
             <div className="bg-card rounded-2xl p-8 border border-border">
               <h3 className="text-2xl font-bold text-foreground mb-4">Ainda tem dúvidas?</h3>
-              <p className="text-muted-foreground text-lg">
-                Use nosso formulário de contato acima para esclarecer suas questões. 
-                Nossa equipe está pronta para ajudar você!
+              <p className="text-muted-foreground text-lg mb-6">
+                Entre em contato conosco pelo WhatsApp ou crie seu agente grátis agora mesmo!
               </p>
+              <Button 
+                variant="cta" 
+                size="lg"
+                onClick={() => window.location.href = "https://iniciar.telein.com.br/?pixel_id=1701412423354782&conversion_name=agenteIA&produto=agenteIA"}
+              >
+                <Phone className="mr-2" />
+                Criar Agente Grátis
+              </Button>
             </div>
           </div>
         </div>
