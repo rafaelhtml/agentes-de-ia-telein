@@ -52,6 +52,14 @@ const FAQ = () => {
     {
       question: "Tenho suporte técnico?",
       answer: "Sim! Oferecemos suporte técnico completo para ajudar na configuração, tirar dúvidas e resolver qualquer problema. Nossa equipe está sempre disponível para garantir que seu agente funcione perfeitamente."
+    },
+    {
+      question: "Qual é o melhor plano para meu negócio?",
+      answer: "O ideal é avaliar quantos atendimentos seu assistente de IA realizará mensalmente. Geralmente, estimamos entre 8-10 interações por atendimento, porém isso pode mudar conforme seu segmento. Outro fator importante é a quantidade de informações que você disponibiliza para treinar o assistente - quanto mais completo o treinamento, melhor o desempenho."
+    },
+    {
+      question: "Como são calculados os créditos utilizados?",
+      answer: "Sempre que seu Assistente de IA responde uma mensagem, são utilizados créditos. A quantidade depende do modelo de linguagem selecionado (GPT-4, GPT-4 mini, LLaMA 3.1, etc). Por exemplo: se você escolher um modelo que gasta 3 créditos por interação, e seu assistente enviar 10 respostas em uma conversa, serão consumidos 30 créditos no total. Quando precisar de mais, basta recarregar diretamente na plataforma."
     }
   ];
 

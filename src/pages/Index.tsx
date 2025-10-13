@@ -9,6 +9,7 @@ import Comparison from "@/components/Comparison";
 import Guarantee from "@/components/Guarantee";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
+import ChatTelein from "@/components/ChatTelein";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Problem />
       <Solution />
       <Comparison />
+      <ChatTelein />
       <Testimonials />
       <Pricing />
       <Guarantee />
