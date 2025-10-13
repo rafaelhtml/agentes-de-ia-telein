@@ -30,14 +30,9 @@ const Hero = () => {
             </div>
             
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 bg-[#25D366]/10 border border-[#25D366]/30 rounded-full px-4 py-2 mb-2">
-                <MessageCircle className="w-5 h-5 text-[#25D366]" fill="#25D366" />
-                <span className="text-sm font-semibold text-foreground">Atendimento via WhatsApp</span>
-              </div>
-              
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 <span className="text-telein-blue block">Equipe sobrecarregada?</span>
-                <span className="text-telein-orange block">Deixe a IA atender por você.</span>
+                <span className="text-telein-orange block">Deixe a IA atender o WhatsApp por você.</span>
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
