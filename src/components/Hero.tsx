@@ -30,17 +30,15 @@ const Hero = () => {
             
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                <span className="text-telein-blue block">Multiplique suas vendas</span>
-                com o robô que liga,
-                <span className="text-telein-orange block">oferece e qualifica</span>
-                automaticamente
+                <span className="text-telein-blue block">Equipe sobrecarregada?</span>
+                <span className="text-telein-orange block">Deixe a IA atender por você.</span>
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-lg">
-                Sistema liga para sua lista de contatos, oferece seu produto, filtra quem demonstrou interesse e chama no Whatsapp de forma automática.
+                Um agente de IA responde em segundos, 24/7, qualifica e só passa o que importa pro humano — sem programar e com teste grátis.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
-                *Tecnologia URA Reversa
+                *Atendimento humanizado com IA em tempo real
               </p>
             </div>
             
@@ -53,7 +51,7 @@ const Hero = () => {
                 onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Phone className="mr-2" />
-                Teste Grátis (2000 Ligações)
+                Teste Grátis Agora
               </Button>
               <Button 
                 variant="outline_light" 
