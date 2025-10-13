@@ -17,11 +17,11 @@ const Index = () => {
       <SocialProof />
       <Problem />
       <Solution />
-      <Testimonials />
-      <AboutUs />
-      <Pricing />
       <Comparison />
+      <Testimonials />
+      <Pricing />
       <Guarantee />
+      <AboutUs />
       <CTA />
       <FAQ />
     </div>
