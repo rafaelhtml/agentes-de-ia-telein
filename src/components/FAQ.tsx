@@ -34,10 +34,6 @@ const FAQ = () => {
       answer: "Sim! O agente de IA funciona 24/7, respondendo seus clientes a qualquer hora do dia ou da noite, inclusive finais de semana e feriados. Seus clientes nunca ficam sem resposta."
     },
     {
-      question: "Posso integrar com meu CRM?",
-      answer: "Sim! O agente se integra com diversos sistemas via webhook, permitindo enviar informações de leads qualificados, agendamentos e interações diretamente para seu CRM ou sistema de gestão."
-    },
-    {
       question: "E se o agente não souber responder algo?",
       answer: "O agente possui transferência inteligente para atendimento humano. Se ele não souber responder ou o cliente solicitar falar com uma pessoa, a conversa é transferida automaticamente para sua equipe, garantindo que nenhum cliente fique sem atendimento."
     },
@@ -59,7 +55,7 @@ const FAQ = () => {
     },
     {
       question: "Como são calculados os créditos utilizados?",
-      answer: "Sempre que seu Assistente de IA responde uma mensagem, são utilizados créditos. A quantidade depende do modelo de linguagem selecionado (GPT-4, GPT-4 mini, LLaMA 3.1, etc). Por exemplo: se você escolher um modelo que gasta 3 créditos por interação, e seu assistente enviar 10 respostas em uma conversa, serão consumidos 30 créditos no total. Quando precisar de mais, basta recarregar diretamente na plataforma."
+      answer: "Sempre que seu Assistente de IA responde uma mensagem, são utilizados créditos. A quantidade depende do modelo de linguagem selecionado (GPT-5, GPT-5 mini, etc). Por exemplo: se você escolher um modelo que gasta 3 créditos por interação, e seu assistente enviar 10 respostas em uma conversa, serão consumidos 30 créditos no total. Quando precisar de mais, basta recarregar diretamente na plataforma."
     }
   ];
 
