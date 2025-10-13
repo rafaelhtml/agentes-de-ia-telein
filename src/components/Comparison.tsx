@@ -58,7 +58,7 @@ const Comparison = () => {
               <div className="grid grid-cols-3 gap-4 items-center pt-2 border-t border-border">
                 <span className="text-sm font-medium">Custo mensal</span>
                 <span className="text-center text-sm">R$ 3.000+</span>
-                <span className="text-center text-telein-orange font-semibold">A partir de R$ 297</span>
+                <span className="text-center text-telein-orange font-semibold">A partir de R$ 120</span>
               </div>
             </div>
             
