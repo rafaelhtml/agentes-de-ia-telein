@@ -91,7 +91,7 @@ const Hero = () => {
               </div>
               
               <VSLPlayer
-                src="https://interface.telein.com.br/donwload/tutorial.mp4"
+                src="https://interface.telein.com.br/downloads/tutorial.mp4"
                 poster={teleinThumb}
                 className="w-full"
                 style={{ aspectRatio: '720/1280' }}
@@ -113,7 +113,7 @@ const Hero = () => {
               
               <div className="relative bg-black rounded-xl overflow-hidden" style={{ aspectRatio: '720/1280' }}>
                 <VSLPlayer 
-                  src="https://interface.telein.com.br/donwload/tutorial.mp4"
+                  src="https://interface.telein.com.br/downloads/tutorial.mp4"
                   poster={teleinThumb}
                   className="w-full"
                   style={{ aspectRatio: '720/1280' }}
