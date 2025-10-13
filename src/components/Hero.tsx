@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Phone, Users, Zap, Play } from "lucide-react";
+import { Phone, Users, Zap, Play, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-ura-reversa.jpg";
 import teleinLogo from "@/assets/telein-logo.png";
 import teleinThumb from "@/assets/telein-thumb.png";
@@ -31,19 +30,15 @@ const Hero = () => {
             </div>
             
             <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 bg-[#25D366]/10 border border-[#25D366]/30 rounded-full px-4 py-2 mb-2">
+                <MessageCircle className="w-5 h-5 text-[#25D366]" fill="#25D366" />
+                <span className="text-sm font-semibold text-foreground">Atendimento via WhatsApp</span>
+              </div>
+              
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
                 <span className="text-telein-blue block">Equipe sobrecarregada?</span>
                 <span className="text-telein-orange block">Deixe a IA atender por você.</span>
               </h1>
-              
-              <div className="flex flex-wrap gap-3 mb-4">
-                <Badge className="bg-telein-blue/10 text-telein-blue border-telein-blue/20 px-4 py-2 text-sm font-medium">
-                  Sem programar
-                </Badge>
-                <Badge className="bg-telein-orange/10 text-telein-orange border-telein-orange/20 px-4 py-2 text-sm font-medium">
-                  Teste grátis
-                </Badge>
-              </div>
               
               <p className="text-xl text-muted-foreground max-w-lg">
                 Um agente de IA responde em segundos, 24/7, qualifica e só passa o que importa pro humano.
