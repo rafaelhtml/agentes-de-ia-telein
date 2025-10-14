@@ -39,7 +39,7 @@ const Hero = () => {
                 Um agente de IA responde em segundos, 24/7, qualifica e só passa o que importa pro humano.
               </p>
               <p className="text-sm text-muted-foreground/80 mt-2">
-                Monte e experimente Grátis seu agente de IA em Minutos.
+                Configure seu agente de IA agora e converse com ele sem custo algum.
               </p>
             </div>
             
