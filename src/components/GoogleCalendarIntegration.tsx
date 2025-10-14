@@ -59,8 +59,8 @@ const GoogleCalendarIntegration = () => {
           {/* Demo Image + Features */}
           <div className="grid lg:grid-cols-2 gap-8 mb-12 items-center">
             {/* WhatsApp Demo */}
-            <div className="order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
+            <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border max-w-sm">
                 <img 
                   src={whatsappDemo} 
                   alt="Demonstração do agente de IA agendando automaticamente via WhatsApp integrado ao Google Calendar"
