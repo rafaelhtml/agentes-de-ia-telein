@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Users, MessageSquare, CheckCircle2, Zap, Clock, BarChart3 } from "lucide-react";
+import { buildSignupUrl } from "@/lib/url-utils";
 
 const ChatTelein = () => {
   const benefits = [
@@ -94,7 +95,7 @@ const ChatTelein = () => {
             <Button 
               variant="hero"
               size="lg"
-              onClick={() => window.location.href = "https://iniciar.telein.com.br/?pixel_id=1701412423354782&conversion_name=agenteIA&produto=agenteIA"}
+              onClick={() => window.location.href = buildSignupUrl()}
               className="text-lg px-8 py-6 h-auto"
             >
               Começar Agora Grátis

@@ -2,6 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HelpCircle, MessageCircle, CheckCircle, Phone } from "lucide-react";
+import { buildSignupUrl } from "@/lib/url-utils";
 
 const FAQ = () => {
   const faqItems = [
@@ -121,7 +122,7 @@ const FAQ = () => {
               <Button 
                 variant="cta" 
                 size="lg"
-                onClick={() => window.location.href = "https://iniciar.telein.com.br/?pixel_id=1701412423354782&conversion_name=agenteIA&produto=agenteIA"}
+                onClick={() => window.location.href = buildSignupUrl()}
               >
                 <Phone className="mr-2" />
                 Criar Agente Grátis
