@@ -4,8 +4,7 @@
 export const buildSignupUrl = (): string => {
   const baseUrl = "https://iniciar.telein.com.br/";
   const params = new URLSearchParams({
-    pixel_id: "1701412423354782",
-    conversion_name: "agenteIA",
+    event_name: "agenteIA",
     produto: "agenteIA"
   });
 
