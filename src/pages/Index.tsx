@@ -5,6 +5,7 @@ import GoogleCalendarIntegration from "@/components/GoogleCalendarIntegration";
 import Testimonials from "@/components/Testimonials";
 import AboutUs from "@/components/AboutUs";
 import Pricing from "@/components/Pricing";
+import Implementation from "@/components/Implementation";
 import Comparison from "@/components/Comparison";
 import Guarantee from "@/components/Guarantee";
 import CTA from "@/components/CTA";
@@ -22,6 +23,7 @@ const Index = () => {
       <ChatTelein />
       <Testimonials />
       <Pricing />
+      <Implementation />
       <Guarantee />
       <AboutUs />
       <CTA />
