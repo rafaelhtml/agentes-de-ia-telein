@@ -14,10 +14,29 @@ export const buildSignupUrl = (): string => {
   const conjuntodeanuncio = currentParams.get("conjuntodeanuncio");
   const campanha = currentParams.get("campanha");
 
-  // Adiciona parâmetros se existirem
+  // Adiciona parâmetros próprios se existirem
   if (anuncio) params.append("anuncio", anuncio);
   if (conjuntodeanuncio) params.append("conjuntodeanuncio", conjuntodeanuncio);
   if (campanha) params.append("campanha", campanha);
+
+  // Encaminha parâmetros de tracking do Google Ads / UTM para a página de cadastro
+  const forwardKeys = [
+    "gclid",
+    "gbraid",
+    "wbraid",
+    "gad_source",
+    "gclsrc",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "utm_id",
+  ];
+  forwardKeys.forEach((key) => {
+    const value = currentParams.get(key);
+    if (value) params.append(key, value);
+  });
 
   return `${baseUrl}?${params.toString()}`;
 };
