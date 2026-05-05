@@ -24,8 +24,8 @@ const Index = () => {
       <Comparison />
       <ChatTelein />
       <Testimonials />
-      <Pricing />
       <Implementation />
+      <Pricing />
       <Guarantee />
       <AboutUs />
       <CTA />
