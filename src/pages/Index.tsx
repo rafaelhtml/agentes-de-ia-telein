@@ -21,13 +21,13 @@ const Index = () => {
       <Solution />
       <AdvancedFeatures />
       <GoogleCalendarIntegration />
-      <Comparison />
-      <ChatTelein />
       <Testimonials />
+      <ChatTelein />
+      <Comparison />
+      <AboutUs />
       <Implementation />
       <Pricing />
       <Guarantee />
-      <AboutUs />
       <CTA />
       <FAQ />
     </div>
