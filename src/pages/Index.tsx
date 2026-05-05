@@ -19,16 +19,16 @@ const Index = () => {
       <Hero />
       <Problem />
       <Solution />
+      <Implementation />
       <CTA />
       <AdvancedFeatures />
       <GoogleCalendarIntegration />
       <Testimonials />
       <ChatTelein />
-      <Comparison />
       <AboutUs />
-      <Implementation />
       <Pricing />
       <Guarantee />
+      <Comparison />
       <FAQ />
     </div>
   );
