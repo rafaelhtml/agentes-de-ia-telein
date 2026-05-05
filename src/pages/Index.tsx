@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
+import AdvancedFeatures from "@/components/AdvancedFeatures";
 import GoogleCalendarIntegration from "@/components/GoogleCalendarIntegration";
 import Testimonials from "@/components/Testimonials";
 import AboutUs from "@/components/AboutUs";
@@ -18,6 +19,7 @@ const Index = () => {
       <Hero />
       <Problem />
       <Solution />
+      <AdvancedFeatures />
       <GoogleCalendarIntegration />
       <Comparison />
       <ChatTelein />
