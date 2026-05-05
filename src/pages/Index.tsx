@@ -19,8 +19,8 @@ const Index = () => {
       <Hero />
       <Problem />
       <Solution />
-      <Implementation />
       <CTA />
+      <Implementation />
       <AdvancedFeatures />
       <GoogleCalendarIntegration />
       <Testimonials />
