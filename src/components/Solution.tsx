@@ -1,27 +1,57 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Phone, MessageSquare, Target, Zap } from "lucide-react";
-import whatsappImage from "@/assets/whatsapp-integration.jpg";
+import { CheckCircle, Phone, MessageSquare, Target, Zap, Bot, Plug, Wallet } from "lucide-react";
 import { buildSignupUrl } from "@/lib/url-utils";
 
 const Solution = () => {
-  const benefits = [
-    "✨ Configure em minutos sem programar",
-    "💬 Atende em tempo real 24/7 no WhatsApp",
-    "🧠 Respostas humanizadas com IA avançada",
-    "📅 Realiza agendamentos automaticamente",
-    "❓ Responde dúvidas frequentes instantaneamente",
-    "🛍️ Recomenda produtos baseado no perfil do cliente",
-    "👤 Transfere para humano apenas quando necessário",
-    "📊 Qualifica leads automaticamente",
-    "🔗 Integração via URL/API com qualquer sistema externo em tempo real",
-    "📸 Integração com Instagram Direct",
-    "🖼️ Galerias de imagens enviadas durante a conversa",
-    "📋 CRM Kanban com movimentação automática de leads pela IA",
-    "💰 R$ 79,90/mês por WhatsApp conectado",
-    "💳 Pague apenas pelos créditos que usar",
-    "🚀 Teste grátis - Crie seu agente agora",
-    "🎯 Sem fidelidade - Cancele quando quiser",
-    "🛠️ Suporte especializado sempre disponível"
+  const benefitGroups = [
+    {
+      icon: Bot,
+      title: "Inteligência humanizada",
+      color: "text-telein-blue",
+      bg: "bg-telein-blue/10",
+      items: [
+        "Respostas naturais com IA avançada",
+        "Qualifica leads automaticamente",
+        "Transfere para humano só quando necessário",
+        "Configure sem programar, em minutos",
+      ],
+    },
+    {
+      icon: Zap,
+      title: "Atende e converte por você",
+      color: "text-telein-orange",
+      bg: "bg-telein-orange/10",
+      items: [
+        "Disponível 24/7 no WhatsApp e Instagram",
+        "Realiza agendamentos automaticamente",
+        "Responde dúvidas frequentes na hora",
+        "Recomenda produtos pelo perfil do cliente",
+      ],
+    },
+    {
+      icon: Plug,
+      title: "Conectado ao seu negócio",
+      color: "text-telein-blue",
+      bg: "bg-telein-blue/10",
+      items: [
+        "Integração via URL/API em tempo real",
+        "CRM Kanban com movimentação automática",
+        "Galerias de imagens enviadas na conversa",
+        "Funciona com seu ERP, CRM ou agenda",
+      ],
+    },
+    {
+      icon: Wallet,
+      title: "Modelo justo, sem surpresas",
+      color: "text-telein-orange",
+      bg: "bg-telein-orange/10",
+      items: [
+        "Apenas R$ 79,90/mês de mensalidade fixa",
+        "Você paga só os créditos que usar",
+        "Custo acompanha sua demanda real",
+        "Sem fidelidade — cancele quando quiser",
+      ],
+    },
   ];
 
   const process = [
@@ -69,52 +99,49 @@ const Solution = () => {
             <span className="block text-sm mt-2 opacity-75">*Teste grátis - Configure agora mesmo sem custo</span>
           </p>
         </div>
-        
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Benefits List */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-telein-orange mb-6">
-              Por que escolher nosso Agente de IA?
-            </h3>
-            
-            <div className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-telein-blue flex-shrink-0 mt-0.5" />
-                  <span className="text-lg">{benefit}</span>
+
+        {/* Benefit groups */}
+        <div className="mb-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold">
+            Por que escolher nosso <span className="text-telein-orange">Agente de IA</span>?
+          </h3>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {benefitGroups.map((group, idx) => {
+            const Icon = group.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-card rounded-2xl p-6 md:p-8 shadow-telein-card border border-border hover:shadow-telein-glow transition-all duration-300"
+              >
+                <div className="flex items-center gap-4 mb-5">
+                  <div className={`${group.bg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0`}>
+                    <Icon className={`h-6 w-6 ${group.color}`} />
+                  </div>
+                  <h4 className="text-xl font-bold">{group.title}</h4>
                 </div>
-              ))}
-            </div>
-            
-            <Button 
-              variant="cta" 
-              size="xl" 
-              className="w-full sm:w-auto"
-              onClick={() => window.location.href = buildSignupUrl()}
-            >
-              <Phone className="mr-2" />
-              Criar Meu Agente Grátis
-            </Button>
-          </div>
-          
-          {/* Image */}
-          <div className="relative">
-            <div className="bg-card rounded-2xl p-8 shadow-telein-card">
-              <img 
-                src="/lovable-uploads/39213192-5281-40ae-b588-e665781e12ce.png" 
-                alt="Integração WhatsApp Web e API Oficial" 
-                className="w-full rounded-lg"
-              />
-              <div className="mt-6 text-center">
-                <h4 className="text-lg font-semibold text-telein-blue mb-2">
-                  Configure em minutos
-                </h4>
-                <p className="text-muted-foreground">
-                  Tão simples quanto conectar no WhatsApp Web
-                </p>
+                <ul className="space-y-3">
+                  {group.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle className={`h-5 w-5 ${group.color} flex-shrink-0 mt-0.5`} />
+                      <span className="text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          </div>
+            );
+          })}
+        </div>
+
+        <div className="text-center mb-20">
+          <Button
+            variant="cta"
+            size="xl"
+            onClick={() => (window.location.href = buildSignupUrl())}
+          >
+            <Phone className="mr-2" />
+            Criar Meu Agente Grátis
+          </Button>
         </div>
         
         {/* Process Steps */}
